@@ -1,0 +1,144 @@
+---
+layout: single
+---
+<!-- .hentry -->
+<article class="post type-post format-standard hentry">
+    <!-- .entry-header -->
+    <header class="entry-header">
+    <h1 class="entry-title">{{ page.title }}</h1>
+    </header>
+    <!-- .entry-header -->
+
+    <!-- .entry-meta -->
+    <div class="entry-meta">
+        <span class="posted-in">
+            posted in
+        	<a href="/blog/categories/{{ page.category | slugify }}/" title="View all posts in this category">{{ page.category | capitalize }}</a>
+        </span>
+
+        <span class="posted-on">
+            on
+            <a rel="bookmark"><time class="entry-date">{{ page.date | date: "%B %-d, %Y" }}</time></a>
+        </span>
+
+
+        <span class="posted-by">
+        	by
+        	<a href="/blog" class="url fn n" title="View all posts by this author" rel="author">Shannon Babincsak</a>
+        </span>
+    </div>
+    <!-- .entry-meta -->
+
+    {% if page.img %}
+    <!-- .featured-image -->
+    <div class="featured-image">
+        <img src="{{ page.img.url }}" alt="{{ page.img.alt }}" title="{{ page.img.title }}">
+    </div>
+    <!-- .featured-image -->
+    {% endif %}
+
+    <!-- .entry-content -->
+    <div class="entry-content">
+        {{ content | markdownify }}
+
+        {% if page.download or page.preview or page.github %}
+        <!-- .project-action -->
+        <div class="project-action">
+            {% if page.download %}
+            <a href="{{ page.download }}" class="button button-icon big blue"><i class="fa fa-cloud-download"></i>DOWNLOAD</a>
+            {% endif %}
+            {% if page.preview %}
+            <a href="{{ page.preview }}" class="button button-icon big grass"><i class="fa fa-eye"></i>PREVIEW</a>
+            {% endif %}
+            {% if page.github %}
+            <a href="{{ page.github }}" class="button button-icon big red"><i class="fa fa-github"></i>GITHUB</a>
+            {% endif %}
+        </div>
+        <!-- .project-action -->
+        {% endif %}
+
+        {% if page.related_articles %}
+        <!-- related articles -->
+        <div class="related-posts">
+            <h3>RELATED ARTICLES / LINKS</h3>
+            <ol>
+                {% for related_article in page.related_articles %}
+                <li><a href="{{ related_article.url }}" rel="bookmark">{{ related_article.title }}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+        <!-- related articles -->
+        {% endif %}
+
+        {% if site.related_posts.size > 0 %}
+        <!-- .related-posts -->
+        <div class="related-posts">
+            <h3>RELATED POSTS</h3>
+            <ol>
+                {% for related_post in site.related_posts limit:3 %}
+                <li><a href="{{ related_post.dir }}" rel="bookmark">{{ related_post.title }}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+        <!-- .related-posts -->
+        {% endif %}
+    </div>
+    <!-- .entry-content -->
+
+    {% if page.tags.size > 0 %}
+    <!-- .entry-meta -->
+    <footer class="entry-meta">
+        <h3>TAGS</h3>
+        {% for tag in page.tags %}
+        <a href="/blog/tagged/{{ tag | slugify }}" title="View all posts with this tag">{{ tag }}</a>
+        {% endfor %}
+    </footer>
+    <!-- .entry-meta -->
+    {% endif %}
+
+</article>
+<!-- .hentry -->
+
+
+
+
+<!-- .about-author -->
+<aside class="about-author">
+    <h3>WRITTEN BY</h3>
+
+    <!-- .author-bio -->
+    <div class="author-bio">
+        <!-- .author-img -->
+        <div class="author-img">
+            <a href="/#/about"><img alt="Avatar" src="/img/avatar.png" class="avatar"></a>
+        </div>
+        <!-- .author-img -->
+        <!-- .author-info -->
+        <div class="author-info">
+            <h4 class="author-name">Shannon Babincsak</h4>
+            <p>{{ site.blog_author_description | markdownify }}</p>
+        </div>
+        <!-- .author-info -->
+    </div>
+    <!-- .author-bio -->
+
+</aside>
+<!-- .about-author -->
+
+<!-- .nav-single -->
+<nav class="nav-single row">
+    <div class="nav-previous col-sm-6">
+        {% if page.previous %}
+        <h4>PREVIOUS POST</h4>
+        <a href="{{ page.previous.dir }}" rel="prev"><span class="meta-nav">←</span> {{ page.previous.title }}</a>
+        {% endif %}
+    </div>
+
+    <div class="nav-next col-sm-6">
+        {% if page.next %}
+        <h4>NEXT POST</h4>
+        <a href="{{ page.bext.dir }}" rel="next">{{ page.next.title }} <span class="meta-nav">→</span></a>
+        {% endif %}
+    </div>
+</nav>
+<!-- .nav-single -->

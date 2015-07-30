@@ -1,0 +1,33 @@
+- title: Intern
+  company: Putnam County Sheriff's Office
+  location: "Cookeville, TN"
+  start: September 2014
+  end: June 2015
+  summary: |
+    I developed a website for Putnam County's Sheriff's Office that would allow them
+    to effectively and efficiently 1) communicate with the public and 2) share information
+    with the community.  This was my first time using Wordpress, and I also provided
+    a custom design for the website.
+
+- title: Co-op
+  company: ADTRAN
+  location: "Huntsville, AL"
+  start: January 2015
+  end: May 2015
+  blog_post: /blog/2015/07/my-first-term-at-adtran/
+  summary: |
+    I developed features for one of ADTRAN's internal sites using Python, Bottle,
+    and MongoDB for the back end and HTML, CSS, LESS, and JavaScript (+ jQuery and
+    other libraries) for the front end. This term was **so much fun** because I
+    learned **A LOT** about web development, Python, testing, etc., and
+    everything I worked on was useful -- no throwaway code!
+
+- title: Co-op
+  company: ADTRAN
+  location: "Huntsville, AL"
+  current: Yes
+  start: August 2015
+  end: December 2015
+  summary: |
+    I'll be returning to ADTRAN in a few weeks for my second term as a co-op!
+    Stay tuned.

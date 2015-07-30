@@ -1,0 +1,46 @@
+---
+title: Search Results
+---
+
+<!DOCTYPE html>
+<html lang="en" class="no-js single-page-layout" data-classic-layout="false" data-mobile-only-classic-layout="true" data-inAnimation="fadeInUp" data-outAnimation="fadeOutDownBig">
+    {% include head.html %}
+
+    <body>
+        <!-- CONTAINER -->
+        <div class="container" id="container">
+            <!-- HEADER -->
+            <header class="header">
+                <h1>Shannon Babincsak</h1>
+                <p>{{ site.header_description }}</p>
+
+                <!-- NAV MENU -->
+                <ul class="vs-nav">
+                    <li><a href="/blog"><i title="back to blog" class="icon-left-open tooltip" data-tooltip-pos="left"></i></a></li>
+                    <li><a href="/"><i title="go to home" class="icon-home-1 tooltip" data-tooltip-pos="bottom"></i></a></li>
+                    <li><a><i title="search" class="search-link fa fa-search tooltip active" data-tooltip-pos="right"></i></a></li>
+                </ul>
+                <!-- NAV MENU -->
+
+                {% include search.html %}
+            </header>
+            <!-- HEADER -->
+
+            <!-- WRAPPER -->
+            <div class="wrapper mb-xlg">
+                <div class="blog-posts readable-content mt-xlg mb-xlg">
+                    <h1 class="text-center">Search Results</h1>
+                    <div id="tipue_search_content"><div class="tipue_search_spinner"><div class="tipue_search_rect1"></div><div class="tipue_search_rect2"></div><div class="rect3"></div></div></div>
+                </div>
+            </div>
+            <!-- WRAPPER -->
+
+            {% include footer.html %}
+            <script src="/js/tipuesearch/tipuesearch_content.js"></script>
+            <script src="/js/tipuesearch/tipuesearch_set.js"></script>
+            <script src="/js/tipuesearch/tipuesearch.js"></script>
+            <script src="/js/search.js"></script>
+        </div>
+        <!-- CONTAINER -->
+    </body>
+</html>

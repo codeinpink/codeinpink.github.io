@@ -1,0 +1,54 @@
+---
+layout: blog
+---
+
+{% for post in paginator.posts %}
+<!-- .post -->
+<article class="post type-post {{ post.type }}">
+    <!-- .entry-meta -->
+    <footer class="entry-meta">
+        <span class="post-format"></span>
+        <span title="{{ post.date | date: '%Y' }}" class="entry-date"><span class="day">{{ post.date | date: '%d' }}</span>{{ post.date | date: '%b' | downcase }}</span>
+    </footer>
+    <!-- .entry-meta -->
+
+    <!-- .entry-header -->
+    <header class="entry-header">
+        <h1 class="entry-title">
+            <a href="{{ post.dir }}" rel="bookmark">{{ post.title }}</a>
+        </h1>
+    </header>
+    <!-- .entry-header -->
+    {% if post.img %}
+    <!-- .featured-image -->
+    <div class="featured-image">
+        <img src="{{ post.img.url }}" alt="{{ post.img.alt }}" title="{{ post.img.title }}">
+    </div>
+    <!-- .featured-image -->
+    {% endif %}
+
+    <!-- .entry-content -->
+    <div class="entry-content">
+        {{ post.excerpt | truncatewords: 75 }}
+        <a href="{{ post.dir }}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+    </div>
+    <!-- .entry-content -->
+</article>
+<!-- .post -->
+
+{% endfor %}
+
+<!-- post nav -->
+<nav class="navigation" role="navigation">
+    <div class="col-md-6 pl-none">
+        {% if paginator.previous_page %}
+        <div class="nav-previous"><a href="{{ paginator.previous_page_path }}"><span class="meta-nav">←</span> Older posts</a></div>
+        {% endif %}
+    </div>
+    <div class="col-md-6 pr-none">
+        {% if paginator.next_page %}
+        <div class="nav-next"><a href="{{ paginator.next_page_path }}">Newer posts <span class="meta-nav">→</span></a></div>
+        {% endif %}
+    </div>
+</nav>
+<!-- post nav -->

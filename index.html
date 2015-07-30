@@ -1,0 +1,421 @@
+---
+layout: default
+---
+
+<!-- WRAPPER -->
+    <div class="wrapper">
+        <!-- PAGE : ABOUT -->
+        <section id="about" class="page">
+            <div class="content">
+                <!-- row -->
+                <div class="row">
+                    <!-- column 12/12 -->
+                    <div class="col-md-12">
+                        <h2 class="section-title"><span><i class="icon-guest"></i>A LITTLE ABOUT ME</span></h2>
+                        <!-- intro -->
+                        <div class="intro">
+                            <h2>
+                                Hello! I love
+                                <span class="rotate-words">
+                                    <span>programming.</span>
+                                    <span>web development.</span>
+                                    <span>constitutional law.</span>
+                                    <span>learning new things.</span>
+                                    <span>Python and Java.</span>
+                                </span>
+                                <br>
+                                I live in Tennessee, but I'm from Chicago.
+                                <br>
+                                I'm always looking for projects to work on or new opportunities to add to my resume.
+                            </h2>
+                        </div>
+                        <!-- intro -->
+                    </div>
+                    <!-- column 12/12 -->
+                </div>
+                <!-- row -->
+
+                <h2 class="section-title"><span><i class="fa fa-magic"></i>INTERESTS</span></h2>
+                <!-- SERVICES -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <!-- service -->
+                        <div class="service color1">
+                            <i class="fa fa-html5"></i>
+                            <h4>Web Development</h4>
+                            <p>I love making web sites! I can do both front end and
+                            back end web development, but if I had to choose, I'd
+                            choose back-end – or possibly full stack if that's an option!</p>
+                        </div>
+                        <!-- service -->
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <!-- service -->
+                        <div class="service color2">
+                            <i class="fa fa-code"></i>
+                            <h4>Programming</h4>
+                            <p>I love web development, but I also love programming in general. I'm still
+                                interested in other fields: software, mobile, etc.!</p>
+                        </div>
+                        <!-- service -->
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <!-- service -->
+                        <div class="service color4">
+                            <i class="fa fa-rocket"></i>
+                            <h4>Constantly Learning</h4>
+                            <p>I'm lucky to be in a field where this is a real possibility! What's
+                            better than the rush of joy from learning and understanding
+                            something new? </p>
+                        </div>
+                        <!-- service -->
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <!-- service -->
+                        <div class="service color5">
+                            <i class="fa fa-gavel"></i>
+                            <h4>Constitutional Law</h4>
+                            <p>I love studying constitutional law! If you ask me about a case I've studied, then you've
+                            made a mistake because I won't shut up until you're just as excited as I am.</p>
+                        </div>
+                        <!-- service -->
+                    </div>
+                </div>
+                <!-- SERVICES -->
+
+                <h2 class="section-title"><span><i class="fa fa-heart"></i>RANDOM FACTS</span></h2>
+
+                <!-- FUN FACT -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <!-- fun-fact -->
+                        <div class="fun-fact">
+                            <i class="fa fa-home"></i>
+                            <h4>I'VE SPENT 13 YEARS IN ILLINOIS AND 8 IN TENNESSEE</h4>
+                        </div>
+                        <!-- fun-fact -->
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <!-- fun-fact -->
+                        <div class="fun-fact">
+                            <i class="fa fa-quote-left"></i>
+                            <h4>MY LAST NAME IS PRONOUNCED "BAB-IN-SACK" (SEE, NOT SO BAD)</h4>
+                        </div>
+                        <!-- fun-fact -->
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <!-- fun-fact -->
+                        <div class="fun-fact">
+                            <i class="fa fa-coffee"></i>
+                            <h4>I DON'T DRINK COFFEE – <em>YET</em></h4>
+                        </div>
+                        <!-- fun-fact -->
+                    </div>
+                </div>
+                <!-- FUN FACT -->
+            </div>
+        </section>
+        <!-- PAGE : ABOUT -->
+
+
+
+        <!-- PAGE : PORTFOLIO -->
+        <section id="portfolio" class="portfolio page">
+            <div class="content">
+                <h2 class="section-title center"><span><i class="icon-leaf"></i>MY WORKS</span></h2>
+
+                <!--FILTERS-->
+                <ul id="filters" class="filters">
+                  <li class="current"><a href="#" data-filter="*">ALL</a></li>
+                  <li><a href="#" data-filter=".web-development">WEB DEVELOPMENT</a></li>
+                </ul>
+                <!--FILTERS-->
+
+
+                <!-- PORTFOLIO -->
+                <div class="portfolio-items media-grid" data-layout="masonry">
+
+
+                {% for project_page in site.data.projects %}
+                    {% assign project = project_page[1] %}
+                      <!-- portfolio-item -->
+                      <div class="media-cell {{ project.category | slugify }} hentry">
+
+                        <div class="media-box">
+                            <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" title="{{ project.image.title }}">
+                            <div class="mask"></div>
+                            <a href="{{ project.dir }}" class="ajax"></a>
+                        </div>
+
+                        <div class="media-cell-desc">
+                            <h3>{{ project.title }}</h3>
+                            <p class="category">{{ project.category }}</p>
+                        </div>
+
+                      </div>
+                      <!-- portfolio-item -->
+
+                {% endfor %}
+                </div>
+                </div>
+                </section>
+                <!-- PORTFOLIO -->
+
+
+        <!-- PAGE : CONTACT -->
+        <section id="contact" class="page">
+            <div class="content">
+                <!-- row -->
+                <div class="row">
+                    <!-- column 12/12 -->
+                    <div class="col-md-12">
+                        <h2 class="section-title"><span><i class="icon-paper-plane"></i>DROP ME A LINE</span></h2>
+
+                        <div class="letter">
+                            <h4 class="letter-title">Shannon Babincsak</h4>
+                            <div class="stamp">
+                                <img src="/img/stamp.png" alt="stamp">
+	                        </div>
+                            <div class="letter-info">
+                                <p><i class="icon-at"></i>shannon.babincsak@gmail.com</p>
+                                <p><i class="icon-location"></i>Crossville, TN</p>
+                            </div>
+                          </div>
+                        <!-- .contact-form -->
+                        <div class="contact-form">
+                            <form id="contact-form" action="http://formspree.io/shannon.babincsak@gmail.com" method="post">
+                                <!-- enter mail subject here -->
+                                <input type="hidden" name="_subject" id="subject" value="New Message From Contact Form!">
+
+                                <p>
+                                    <label for="name">NAME</label>
+                                    <input type="text" name="name" id="name" class="required">
+                                </p>
+
+                                <p>
+                                    <label for="email">EMAIL</label>
+                                    <input type="text" name="email" id="email" class="required email">
+                                </p>
+
+
+                                <p>
+                                    <label for="message">MESSAGE</label>
+                                    <textarea name="message" id="message" class="required"></textarea>
+                                </p>
+
+                                <input type="text" name="_gotcha" style="display:none">
+
+                                <p>
+                                    <input type="submit" class="submit button primary" value="SEND">
+                                </p>
+
+                            </form>
+
+                        </div>
+                        <!-- .contact-form -->
+
+                    </div>
+                    <!-- column 12/12 -->
+                </div>
+                <!-- row -->
+            </div>
+        </section>
+        <!-- PAGE : CONTACT -->
+
+
+
+
+        <!-- PAGE : BLOG -->
+        <section id="blog" class="page">
+            <div class="content">
+                <h2 class="section-title center"><span><i class="icon-book-open"></i>LATEST FROM THE BLOG</span></h2>
+
+                <!-- LATEST POSTS -->
+                <div class="latest-posts media-grid" data-layout="fitRows">
+                    {% for post in site.posts %}
+                    <article class="hentry media-cell">
+
+                        <div class="media-box">
+                            {% if post.img %}
+                            <img src="{{ post.img.url }}" alt="{{ post.img.alt }}" title="{{ post.img.title }}">
+                            {% else %}
+                            <div class="text-center pt-xlg pb-xlg">
+                            {% case post.type %}
+                                {% when "hentry" %}
+                                <i class="fa fa-pencil fa-3x"></i>
+                                {% when "format-quote" %}
+                                <i class="fa fa-quote-left fa-3x"></i>
+                                {% when "format-link" %}
+                                <i class="fa fa-link fa-3x"></i>
+                                {% when "format-status" %}
+                                <i class="icon-location fa-3x"></i>
+                                {% when "format-video" %}
+                                <i class="fa fa-film fa-3x"></i>
+                                {% when "format-audio" %}
+                                <i class="icon-mic fa-3x"></i>
+                                {% when "format-aside" %}
+                                <i class="icon-attach fa-3x"></i>
+                                {% when "format-image" %}
+                                <i class="icon-camera-2 fa-3x"></i>
+                                {% when "format-gallery" %}
+                                <i class="icon-camera-2 fa-3x"></i>
+                            {% endcase %}
+                            </div>
+                            {% endif %}
+                            <div class="mask"></div>
+                            <a href="{{ post.dir }}"></a>
+                        </div>
+
+                        <header class="media-cell-desc">
+                            <span title="{{ post.date | date: '%Y'}}" class="date"><span class="day">{{ post.date | date: '%d'}}</span>{{ post.date | date: '%b' | downcase }}</span>
+                            <h3><a href="{{ post.dir }}">{{ post.title }}</a></h3>
+                        </header>
+
+                    </article>
+                    <!-- post -->
+                    {% endfor %}
+                </div>
+                <!-- LATEST POSTS -->
+                <p class="launch"><a class="button primary" href="/blog">SEE ALL POSTS</a></p>
+
+            </div>
+        </section>
+        <!-- PAGE : BLOG -->
+
+
+        <!-- PAGE : RESUME -->
+        <section id="resume" class="page">
+            <div class="content">
+                <!-- CONTENT -->
+
+
+                <!-- row -->
+                <div class="row">
+                    <!-- col 6/12 -->
+                    <div class="col-md-6">
+                        <!-- timeline -->
+                        <div class="timeline">
+                            <h2><i class="fa fa-flask"></i>WORK HISTORY</h2>
+                            {% for experience in site.data.experiences reversed %}
+                            <div class="event {% if experience.current %}current{% endif %}">
+                                <span class="date">{{ experience.end | date: "%Y" }}</span>
+                                <h4>{{ experience.title }}</h4>
+                                <h5>{{ experience.company }} <span class="pull-right">{{ experience.location }}</span></h5>
+                                <div class="work-summary">{{ experience.summary | markdownify }}</div>
+                                {% if experience.blog_post %}
+                                <p>Read more about this experience <a href="{{ experience.blog_post }}">here</a>!</p>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                       </div>
+                       <!-- timeline -->
+
+                       <!-- timeline -->
+                       <div class="timeline">
+                            <h2><i class="icon-college"></i>EDUCATION HISTORY</h2>
+                            {% for education in site.data.education %}
+                            <div class="event {% if education.current %}current{% endif %}">
+                                <span class="date">{{ education.start | date: "%Y" }} -</span>
+                                {% for degree in education.degrees %}
+                                <h4>{{ degree.name }}, {{ degree.concentration }} <small>({{ degree.type }})</small></h4>
+                                {% endfor %}
+                                <h5>{{ education.school }}</h5>
+                                <p>{{ education.description | markdownify }}</p>
+                            </div>
+
+                            {% endfor %}
+                       </div>
+                       <!-- timeline -->
+
+
+                      </div>
+                      <!-- col 6/12 -->
+
+                       <!-- col 6/12 -->
+                       <div class="col-md-6">
+                           <!-- Dev Skills -->
+                            <h2 class="section-title"><span><i class="icon-cog-1"></i>DEVELOPMENT SKILLS</span></h2>
+
+                            <p class="skill-list">A <span>*</span> indicates at least some level of comfort with the technology.</p>
+                            <h3>Languages</h3>
+                            <ul class="list-inline skill-list">
+                                <li>Python<span>*</span></li>
+                                <li>Java<span>*</span></li>
+                                <li>JavaScript</li>
+                                <li>Ruby</li>
+                                <li>C++</li>
+                                <li>HTML<span>*</span></li>
+                                <li>CSS<span>*</span></li>
+                                <li>LESS</li>
+                                <li>XML<span>*</span></li>
+                            </ul>
+
+                            <h3>Frameworks</h3>
+                            <ul class="list-inline skill-list">
+                                <li>Django<span>*</span></li>
+                                <li>Bottle<span>*</span></li>
+                                <li>Bootstrap<span>*</span></li>
+                            </ul>
+
+                            <h3>Databases</h3>
+                            <ul class="list-inline skill-list">
+                                <li>MongoDB<span>*</span></li>
+                                <li>PostgreSQL</li>
+                            </ul>
+
+                            <h3>Other/Misc.</h3>
+                            <ul class="list-inline skill-list">
+                                <li>Linux (Ubuntu)<span>*</span></li>
+                                <li>jQuery<span>*</span></li>
+                                <li>Wordpress</li>
+                                <li>Selenium WebDriver<span>*</span></li>
+                                <li>Jekyll<span>*</span></li>
+                                <li>Perforce</li>
+                                <li>Git</li>
+                                <li>AJAX<span>*</span></li>
+                                <li>Responsive Design<span>*</span></li>
+                                <li>Mobile Friendly<span>*</span></li>
+                                <li>SEO</li>
+                                <li>D3.js</li>
+                            </ul>
+
+                            <!-- Dev Skills -->
+
+                            <!-- Awards/Honors -->
+                            <h2 class="section-title"><span><i class="icon-award-1"></i>AWARDS/HONORS</span></h2>
+                            <ul>
+                            {% for award in site.data.accomplishments reversed %}
+                                <li>{{ award.title }} <span class="pull-right">{{ award.date }}</span></li>
+                            {% endfor %}
+                            </ul>
+                            <!-- Awards/Honors -->
+
+                            <!-- Planning to Learn -->
+                            <h2 class="section-title"><span><i class="icon-college"></i>PLANNING TO LEARN</span></h2>
+                            <p>I've already used these things before, but I can't say that I <em>really</em> understand them yet. So I hope
+                            to use these in my upcoming projects:</p>
+                            <ul>
+                                <li>Angular, React, or a similar framework</li>
+                                <li>Ruby on Rails</li>
+                                <li>Node</li>
+                            </ul>
+                            <!-- Planning to Learn -->
+
+                       </div>
+                       <!-- col 6/12 -->
+
+                </div>
+                <!-- row -->
+            </div>
+            <!-- CONTENT -->
+        </section>
+        <!-- PAGE : RESUME -->
+    </div>
+    <!-- WRAPPER -->
+</div>
+<!-- CONTAINER -->

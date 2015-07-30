@@ -1,0 +1,43 @@
+---
+title: Blog
+---
+
+<!DOCTYPE html>
+<html lang="en" class="no-js single-page-layout" data-classic-layout="false" data-mobile-only-classic-layout="true" data-inAnimation="fadeInUp" data-outAnimation="fadeOutDownBig">
+    {% include head.html %}
+
+    <body>
+        <!-- CONTAINER -->
+        <div class="container" id="container">
+            <!-- HEADER -->
+            <header class="header">
+                <h1>Shannon Babincsak</h1>
+                <p>{{ site.header_description }}</p>
+
+                <!-- NAV MENU -->
+                <ul class="vs-nav">
+                    <li><a href="/"><i title="go to home" class="icon-home-1 tooltip" data-tooltip-pos="left"></i></a></li>
+                    <li><a><i title="search" class="search-link fa fa-search tooltip" data-tooltip-pos="right"></i></a></li>
+                </ul>
+                <!-- NAV MENU -->
+
+                {% include search.html %}
+            </header>
+            <!-- HEADER -->
+
+            <!-- WRAPPER -->
+            <div class="wrapper">
+
+                <div class="blog-posts readable-content">
+                    <!-- .blog-posts -->
+                    {{ content }}
+                    <!-- .blog-posts -->
+                </div>
+            </div>
+            <!-- WRAPPER -->
+
+            {% include footer.html %}
+        </div>
+        <!-- CONTAINER -->
+    </body>
+</html>

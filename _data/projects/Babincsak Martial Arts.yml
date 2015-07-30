@@ -1,0 +1,49 @@
+title: Babincsak Martial Arts
+date: 5/22/2014
+link: http://www.babincsakmartialarts.com
+type: website
+category: web development
+description: |
+    A website for my family's business, Babincsak Martial Arts. I designed and built this site, and I was responsible for
+    90% of the site's content. The site, along with the facebook page, is now a major part in new student sign-ups.
+
+    My father founded Babincsak Martial Arts in the fall of 2013, and since I had the power to contribute to my family's wellness,
+    I wanted our business to be one of the 50% of businesses that survive past their first five years. A website for the business
+    is a crucial part of securing that goal.
+
+    With this in mind, I taught myself HTML and CSS through tutorials and inspecting elements/viewing page sources of sites around
+    the web. I slowly built the site, and I finished it during my winter break. It was *okay*. It was definitely better than most sites by
+    beginners, but I wasn't proud of it enough to show it off without explaining that I was new to making web sites and that I wasn't
+    a designer. To be truly happy, I needed to redo it.
+
+    So I did, and this time, I learned Bootstrap. This not only helped with the design of the site but also helped with the
+    responsive and mobile aspects of it, too, both of which were non-existent in the previous version. I made sure the site looked good
+    on all screen sizes, and then I started looking into the little things like improving site load times and SEO, again - both of which
+    were non-existent in the previous version. I'm happy to say that the site quickly increased in page rank due to my efforts, and now
+    it sits comfortably at the top for its relevent search terms.
+
+reflection: |
+    When I initially built the site, it was very basic, and because I didn't know much, it looked very basic, too. I'm glad I
+    went back and rebuilt it because not only does it look **much** better now, but it also taught me a lot, too. I learned about
+    responsive design and making a site mobile-friendly, both of which have contributed to decisions in future work/projects. I
+    now also consider things like site load times (and its corresponding techniques to lower it) and SEO when building sites.
+
+    The site isn't without fault, though, and there are a few things I would change:
+
+    *   Use absolute paths (seriously ashamed of both not understanding and not using them)
+    *   Use a static site generator which would help clean up the includes, the gallery,
+        recent pictures, etc.
+image:
+    url: /img/projects/Babincsak-Martial-Arts.png
+    title: "Project: Babincsak Martial Arts"
+    alt: A screenshot of the home page of the website for Babincsak Martial Arts
+technology:
+        - HTML
+        - CSS
+        - JavaScript
+        - PHP
+        - Bootstrap
+        - SEO
+        - Photo Optimization
+        - Responsive
+        - Mobile Friendly

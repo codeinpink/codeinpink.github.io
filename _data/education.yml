@@ -1,0 +1,18 @@
+- school: Tennessee Technological University
+  current: Yes
+  start: "August, 2012"
+  end: now
+  degrees:
+    - name: Computer Science
+      concentration: Software and Scientific Applications
+      type: "B.S."
+      gpa: 3.5
+
+    - name: Political Science
+      concentration: Legal Studies
+      type: "B.S."
+      gpa: 4.0
+  gpa: 3.6
+  description: |
+    I am an honors student at Tennessee Technological University double majoring
+    in Political Science and Computer Science -- interesting combination, I know!

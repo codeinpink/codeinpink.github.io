@@ -1,0 +1,56 @@
+title: Putnam County Sheriff's Office
+date: 5/23/2014
+link: http://putnamcountytnsheriff.com/
+type: website
+category: web development
+description: |
+    A website that I designed and built for Putnam County's Sheriff's Office as an intern.
+    Since the site would need to be updated frequently for pictures, news and events, etc.,
+    Wordpress seemed like the ideal solution. I learned Wordpress and used HTML, CSS, PHP,
+    and Bootstrap to make the site.
+
+    This site, due to its size and the enourmous amount of media and content required, took
+    much longer than the duration of my internship to finish, and I agreed to continue working
+    on it past my internship. I volunteered to make changes when needed for around
+    four and a half months.
+
+    Building this site gave me insight into how to work with customers (the Sheriff's Office being
+    my "customer" in this experience). First, communication is key, especially in regard to deadlines
+    and expectations. Second, there will be compromise. Sometimes, you will need to compromise on some aspect
+    to make the customer happy, whether this is a design element or something bigger.
+    Furthermore, there *will* be times when you will strongly disagree with something,
+    and it's important to stay diplomatic and *explain* your viewpoint. This is even more crucial when it's
+    something that you know would be wrong or detrimental.
+reflection: |
+    I'm proud of the design of the site; I had to compromise in some areas, but
+    overall I think the site looks professional and modern-enough while also giving
+    off a "Sheriff's Office" vibe.
+
+    If I could change some things, I would definitely make the site more Wordpress-friendly.
+    I have more experience (and time) now that I could make a lot more
+    elements of the site be easily editable through the Wordpress interface; some things
+    are unfortunately hidden away in the theme files which makes it hard for others
+    to change.
+
+    I would also be more vocal in regard to expectations, responsibilities, and other people.
+    I might have been too nice when I continued to work on the site past the
+    end of my internship, especially when I was already working 40 hours a week
+    as part of my co-op and things kept being changed with no end
+    in sight. There were also more than a few times when the site was held up
+    because of something taking a week (or two!) when it should have taken 5 minutes,
+    and I think if I explained my concerns to someone, then maybe that would have been
+    taken care of.
+
+image:
+    url: /img/projects/Putnam-County-Sheriffs-Office.png
+    title: "Project: Putnam County Sheriff's Office"
+    alt: A screenshot of the home page of the website for Putnam County Sheriff's Office
+technology:
+        - HTML
+        - CSS
+        - JavaScript
+        - PHP
+        - Wordpress
+        - Bootstrap
+        - Responsive
+        - Mobile Friendly

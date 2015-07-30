@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js single-page-layout" data-classic-layout="false" data-mobile-only-classic-layout="true" data-inAnimation="fadeInUp" data-outAnimation="fadeOutDownBig">
+    {% include head.html %}
+
+    <body>
+        <!-- CONTAINER -->
+        <div class="container" id="container">
+            <!-- HEADER -->
+            <header class="header">
+                <h1>Shannon Babincsak</h1>
+                <p>{{ site.header_description }}</p>
+
+                <!-- NAV MENU -->
+                <ul class="vs-nav">
+                    <li><a href="/#/portfolio"><i title="back to portfolio" class="icon-left-open tooltip" data-tooltip-pos="left"></i></a></li>
+                    <li><a href="/"><i title="go to home" class="icon-home-1 tooltip" data-tooltip-pos="bottom"></i></a></li>
+                    <li><a><i title="search" class="search-link fa fa-search tooltip" data-tooltip-pos="right"></i></a></li>
+                </ul>
+                <!-- NAV MENU -->
+
+                {% include search.html %}
+            </header>
+            <!-- HEADER -->
+
+            <!-- WRAPPER -->
+            <div class="wrapper">
+                <!-- .portfolio-single -->
+                <div class="portfolio-single">
+                    <!-- .row -->
+                    <div class="row">
+
+                        <!-- TITLE - column 8/12 -->
+                        <div class="col-md-8 portfolio-field portfolio-title">
+                            <h2>{{ page.title }} <span class="pl-md">{{ page.category }}</span></h2>
+                        </div>
+                        <!-- TITLE - column 8/12 -->
+
+                        <!-- PORTFOLIO-NAV - column 4/12 -->
+                        <div class="col-md-4 portfolio-field portfolio-nav">
+                            <a class="button back" href="#/portfolio"></a>
+                        </div>
+                        <!-- PORTFOLIO-NAV - column 4/12 -->
+                    </div>
+                    <!-- .row -->
+
+                    <!-- .row -->
+                    <div class="row">
+                        <!-- PORTFOLIO-IMAGES - column 8/12 -->
+                        <div class="col-md-6 portfolio-field">
+                            <img src="{{ page.image.url }}" alt="{{ page.image.alt }}" title="{{ page.image.title }}" class="mb-xs">
+
+                            <div class="launch text-center">
+                                <a href="{{ page.link }}" class="button primary" target="_blank">LAUNCH PROJECT</a>
+                            </div>
+
+                            <h3>Technology</h3>
+                            <ul class="tags">
+                                {% for technology in page.technology %}
+                                <li><a>{{ technology }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- PORTFOLIO-IMAGES - column 8/12 -->
+
+                        <!-- PORTFOLIO SIDEBAR - column 4/12 -->
+                        <div class="col-md-6 portfolio-field">
+                            <h3>Description</h3>
+                            <div id="description">
+                                {{ page.description | markdownify }}
+                            </div>
+
+                            <h3>Reflection</h3>
+                            <div id="reflection">
+                                {{ page.reflection | markdownify }}
+                            </div>
+                        </div>
+                        <!-- PORTFOLIO SIDEBAR - column 4/12 -->
+
+                        {% if page.related_projects.size > 0 %}
+                        <!-- PORTFOLIO RELATED PROJECTS 12/12 -->
+                        <div class="col-md-12 portfolio-field">
+                            <h3>Related Projects</h3>
+                            {% for project in page.related_projects max:1 %}
+                            <div class="col-sm-4">
+                                <a href="/{{ project.dir }} "><img src="{{ project.image.url }}" alt="{{ project.image.alt }}" title="{{ project.image.title }}" class="img-responsive"></a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!-- PORTFOLIO RELATED PROJECTS 12/12 -->
+                        {% endif %}
+                    </div>
+                    <!-- .row -->
+
+
+                    <!-- .row -->
+                    <div class="row">
+
+                        <!-- PORTFOLIO-NAV BOTTOM - column 12/12 -->
+                        <div class="col-md-12 portfolio-field portfolio-nav bottom">
+                            <a class="button back" href="#/portfolio"></a>
+                        </div>
+                        <!-- PORTFOLIO-NAV BOTTOM - column 12/12 -->
+
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .portfolio-single -->
+            </div>
+            <!-- WRAPPER -->
+
+            {% include footer.html %}
+        </div>
+        <!-- CONTAINER -->
+    </body>
+</html>

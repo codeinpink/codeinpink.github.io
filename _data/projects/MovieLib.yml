@@ -1,0 +1,65 @@
+title: MovieLib
+date: 7/15/2015
+link: http://mymovielib.com
+type: website
+category: web development
+description: |
+    A website used to track your movie collection. I chose this project because
+    I wanted to learn a back end MVC framework, and I originally picked Ruby on Rails,
+    but learning both a framework *and* a new language wasn't so easy, so instead
+    I opted for Django, the Python, MVT alternative. It was challenging at first,
+    especially because my only experience with back end frameworks before this was Bottle,
+    a *micro*framework. Once I got the hang of things, though, it all made sense, and I
+    can't wait to try out another framework!
+
+    The site uses Django as the back end, PostgreSQL as the database, and Bootstrap, jQuery,
+    and various other libraries for the front end. The site features a custom user model,
+    various movie-related models, friends, user-managed groups, user profiles, etc. I used
+    AJAX to fetch data/content and to refresh elements of the page in response to user
+    interaction, such as fetching all forms, showing notifications upon events, and refreshing
+    movie tables. I also kept support for more traditional methods of using the site (~90%),
+    so the user isn't restricted to using modals or having to enable JavaScript.
+
+    If, in the future, the site has a lot of users, I would love to add more features
+    to the site. It currently focuses on "owned" movies and "wanted" movies, but I would
+    like to add support for shows/series as well as "loved" movies, "want to watch" movies,
+    and a feature to track borrowed movies.
+reflection: |
+    This was by-far the biggest project of mine that I have worked on, and I'm
+    **very** proud of the final result! Not only does it look **awesome** but it
+    works well, too! One of the reasons I worked so hard and paid the money to host
+    it was because I wanted a site to show off to others, and I think it accomplishes
+    that!
+
+    If I had to change a few things, I would...
+
+    - Add tests to everything. It was weird going from "TEST EVERYTHING" to
+    this, and it makes me kind of uncomfortable knowing how little my code is covered
+    - Change all GET requests of pages to simply return one page and then use jQuery
+    to load a particular element from the page. Right now, I return different HTML
+    depending on if the request is AJAX or not, and it wasn't until ~5 days after
+    finishing that I noticed jQuery's load function. This definitely would have
+    sped things up.
+    - Design more first! I can't really fault myself here because I was too eager to
+    get started, but if I had known more, I would have spent more time planning the models
+    and their relationships (something I had to change halfway through) and all the different
+    pages/views I would need.
+    - Use more packages/apps. Unfortunately, the problem that I faced was that
+    many packages were either outdated or didn't support Python 3. I did try to use
+    what I could, but I probably could have used packages for autocomplete, friendships, and maybe more.
+image:
+    url: /img/projects/MovieLib-1.png
+    title: "Project: MovieLib"
+    alt: A screenshot of the index page of the website MovieLib
+technology:
+        - Python
+        - JavaScript
+        - HTML
+        - CSS
+        - Django
+        - Bootstrap
+        - jQuery
+        - PostgreSQL
+        - AJAX
+        - Responsive
+        - Mobile Friendly

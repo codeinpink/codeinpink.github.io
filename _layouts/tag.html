@@ -1,0 +1,50 @@
+---
+layout: blog-filter
+---
+
+<div class="blog-filter">
+    <div class="section-title center"><span><i class="fa fa-tag"></i></span></div>
+    <h2>{{ page.tag }}</h2>
+    <h3>tag</h3>
+    <div class="section-title"></div>
+</div>
+
+<!-- .blog-posts -->
+<div class="blog-posts">
+    {% for post in site.tags[page.tag] %}
+    <!-- .post -->
+    <article class="post type-post {{ post.type }}">
+        <!-- .entry-meta -->
+        <footer class="entry-meta">
+            <span class="post-format"></span>
+            <span title="{{ post.date | date: '%Y' }}" class="entry-date"><span class="day">{{ post.date | date: '%d' }}</span>{{ post.date | date: '%b' | downcase }}</span>
+        </footer>
+        <!-- .entry-meta -->
+
+        <!-- .entry-header -->
+        <header class="entry-header">
+            <h1 class="entry-title">
+                <a href="{{ post.dir }}" rel="bookmark">{{ post.title }}</a>
+            </h1>
+        </header>
+        <!-- .entry-header -->
+        {% if post.img %}
+        <!-- .featured-image -->
+        <div class="featured-image">
+            <img src="{{ post.img.url }}" alt="{{ post.img.alt }}" title="{{ post.img.title }}">
+        </div>
+        <!-- .featured-image -->
+        {% endif %}
+
+        <!-- .entry-content -->
+        <div class="entry-content">
+            {{ post.excerpt | truncatewords: 75 }}
+            <a href="{{ post.dir }}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+        </div>
+        <!-- .entry-content -->
+    </article>
+    <!-- .post -->
+
+    {% endfor %}
+</div>
+<!-- .blog-posts -->

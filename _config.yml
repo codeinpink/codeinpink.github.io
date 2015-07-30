@@ -1,0 +1,24 @@
+# Site settings
+title: Shannon Babincsak
+email: shannon.babincsak@gmail.com
+description: >
+  The personal website, portfolio and blog of Shannon Babincsak: programmer, web developer,
+  and constitutional law geek.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://codeinpink.github.io" # the base hostname & protocol for your site
+github_username:  codeinpink
+header_description: student, programmer, web developer, constitutional law geek
+blog_author_description: >
+  Shannon is a Computer Science/Political Science double major who loves programming,
+  web development, and studying law. When she's not being productive, she
+  likes to play video games, watch Netflix, and <s>plan for world domination</s> be normal.
+# Build settings
+markdown: kramdown
+
+paginate: 10
+paginate_path: /blog/page/:num/
+
+permalink: /blog/:year/:month/:title/index.html
+
+related_project_keys: ["category", "technology"]
+related_min_common: 7

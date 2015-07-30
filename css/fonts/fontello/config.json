@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "744a71fe4b5ab7c4f4b7cd598e9bf75a",
+      "css": "window",
+      "code": 59392,
+      "src": "entypo"
+    }
+  ]
+}
