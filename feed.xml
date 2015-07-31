@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shannon Babincsak</title>
+    <description>The personal website, portfolio and blog of Shannon Babincsak: programmer, web developer, and constitutional law geek.
+</description>
+    <link>http://codeinpink.github.io/</link>
+    <atom:link href="http://codeinpink.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 30 Jul 2015 18:53:06 -0500</pubDate>
+    <lastBuildDate>Thu, 30 Jul 2015 18:53:06 -0500</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>My First Term at ADTRAN</title>
+        <description>&lt;p&gt;When I accepted an offer to co-op at ADTRAN, I was initially worried about what I’d work on.
+ADTRAN is in the telecommunications industry, so most of their software
+developers probably work on embedded programming. My resume had a lot on it, but all of
+the recent things were web-related, and I wanted to learn back end web development.
+However, I also wanted to work on something that wouldn’t &lt;em&gt;just&lt;/em&gt; be a typical CRUD
+application. Would I find a fit? Would I enjoy my work?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Yes!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I obviously didn’t know this back then, but many companies need some kind
+of web development done; it doesn’t have to be your typical customer-facing
+website. In my case, it was one of ADTRAN’s internal sites used to help developers
+with packaging code. I was lucky to start my term when the site was still very small,
+so I worked on a lot of fun features and saw the site grow from one page to 6-7 +
+~200 (dynamic). Furthermore, the site wasn’t just a CRUD application.&lt;/p&gt;
+
+&lt;div class=&quot;tagline&quot;&gt;&lt;h3&gt;The features I worked on taught me a lot and, overall,
+helped me grow as a programmer, software engineer, and web developer.&lt;/h3&gt;&lt;/div&gt;
+
+&lt;p&gt;(In the rest of this post, when I refer to packages, I mean packages of code.)&lt;/p&gt;
+
+&lt;h2 id=&quot;my-team&quot;&gt;My Team&lt;/h2&gt;
+&lt;p&gt;My team’s responsibilities were maintaining and developing tools for packaging, getting
+more of the code base packaged, and planning and guiding the future of packages at
+the company.  One task that
+all of us participated in was releasing packages, and a fun tradition was to send
+funny pictures whenever one of us released a package. My pictures typically involved
+cats, sea creatures, or weird animal hybrids – the best kind of pictures.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-mentor&quot;&gt;My Mentor&lt;/h2&gt;
+&lt;p&gt;My mentor, Pat, was pretty awesome! He took my interests into consideration when planning
+later features, provided excellent advice and guidance, and often taught me new things
+and encouraged me to always learn more. He was also a fun person to share funny pictures
+with, so there’s that.&lt;/p&gt;
+
+&lt;h2 id=&quot;things-i-worked-on&quot;&gt;Things I Worked On&lt;/h2&gt;
+&lt;p&gt;I won’t bore you with &lt;em&gt;literally every single thing&lt;/em&gt; I worked on while at ADTRAN,
+but I will give an overview of my term and talk about the things I found fun!&lt;/p&gt;
+
+&lt;h3 id=&quot;first-few-releases&quot;&gt;First Few Releases&lt;/h3&gt;
+&lt;p&gt;The beginning of my term was spent making small changes to the site: bug fixes,
+a design overhaul, and small, new features or improvements, such as adding
+autocomplete to email fields or adding a new form to the site. I also tried to
+clean up (through refactoring or deleting) the site’s code as I went along, and
+I made small improvements whenever I could. These things were meant to get me accustomed
+to the site’s code and Python in general, a language I didn’t know yet.&lt;/p&gt;
+
+&lt;h3 id=&quot;admin-page&quot;&gt;Admin Page&lt;/h3&gt;
+&lt;p&gt;In late February, I started releasing major updates to the site, the first being an admin
+page to release packages. Before the admin page, releasing packages required doing a lot
+of checks, SSHing into the package server, and manually moving a package from one folder to
+the next (an obvious contender for automation, right?!). This was spread across multiple
+windows, and if you weren’t careful you could accidentally delete a folder or move it by
+accident (&lt;em&gt;cough&lt;/em&gt;). Being able to release a package through the site would at
+least take care of the easily-automated portion – plus ease the minds of the
+(rightfully) paranoid.&lt;/p&gt;
+
+&lt;p&gt;The next release added onto the admin portion of the site by showing a list of
+packages pending release, information on the request, and who was taking care of
+the package (if anyone yet). It also added more actions, so the someone could
+sign up for a package, reject a package, or release a package with the click
+of a button.&lt;/p&gt;
+
+&lt;p&gt;My team &lt;em&gt;really&lt;/em&gt; loved this one. To put this into perspective, a
+few weeks prior we had &lt;em&gt;one&lt;/em&gt; person request ~15-20 packages to be released at &lt;em&gt;once&lt;/em&gt;,
+and some of the packages needed fixing, so there was discussion in emails. &lt;strong&gt;And it was
+awful&lt;/strong&gt;. So many emails to go through, so many packages to keep track of, and so
+many steps to go through for each package. With these changes, releasing a package
+could take under two minutes if the changes were small enough.&lt;/p&gt;
+
+&lt;p&gt;This was my first experience building a dynamic page! Once finished loading, the page gets
+the package request info from the server and constructs a table with it. The page
+then fetches this data every 5 or 10 seconds and reconstructs the table if there
+were any changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;sharepoint-replacement-aka-release-notes-scraper&quot;&gt;Sharepoint Replacement AKA Release Notes Scraper&lt;/h3&gt;
+&lt;p&gt;The next major release was in late March for a SharePoint replacement (called
+Release Notes Scraper) which would automatically post release notes of released
+packages onto the package site. Before this, teams would have to frustratingly
+deal with posting release notes on SharePoint every time they released
+a new package version – and the release notes were typically just copy-pasted,
+yet another contender for automation!&lt;/p&gt;
+
+&lt;p&gt;Getting the release notes file was easy; Python’s tarfile library made it
+simple to get a list names of the contents inside each package tarball, so I just
+had to get the file with “releasenotes.txt” in its name. From there, I had to make some
+assumptions about the content of the file. Fortunately, one of the requirements to
+release a package was that the release notes needed to contain the previous
+release notes and release versions, the current release notes, and the current
+release version, so I could assume it had these things. The problem was that
+people also included other information between the release version and the
+release notes. This stuff could be useful to collect, but it meant that parsing
+these files wouldn’t be so uniform. From looking at random packages, I made my
+assumptions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Releases are separated by at least two “=”&lt;/li&gt;
+  &lt;li&gt;The release notes may reference a previous release (and thus include a previous
+release version)&lt;/li&gt;
+  &lt;li&gt;A release header contains the version number and misc. info, and it is separated
+from the release notes by yet another two “=”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using these assumptions, I made my release parser as a state design pattern which
+would determine the current line type based on regex and then insert the line into
+the appropriate dictionary key. I would just need to feed it the contents of the
+file, and it would signal when done, returning to me the contents of a release
+separated into the version, date, header, and release notes. From there, I just
+needed to call this after every release and then store the results in the database.&lt;/p&gt;
+
+&lt;p&gt;To take care of the old releases for all ~200 packages as well as
+any packages that might be missed on a day-to-day basis, I made a thread that would
+collect all of the releases for every package once a day using the latest release
+for that package. Since each release should contain the previous releases’ release
+notes, I could use one release per package to get all of the release notes while
+avoiding having to go through each release for every package. Efficient!&lt;/p&gt;
+
+&lt;p&gt;The next release added onto this by offering the ability to subscribe to and unsubscribe
+from packages for release notifications via email. This was one of the features of
+using SharePoint, and if we were going to replace SharePoint, we obviously needed
+to offer this feature, too.&lt;/p&gt;
+
+&lt;p&gt;The SharePoint Replacement/Release Notes Scraper was my biggest release and my
+favorite!&lt;/p&gt;
+
+&lt;div class=&quot;tagline&quot;&gt;&lt;h3&gt;It was pretty big, wanted by many people, and it was
+fun designing the different parts of this system and making them interact with each other.&lt;/h3&gt;&lt;/div&gt;
+
+&lt;p&gt;I also got some good experience working with a database and good exposure to MongoDB, a type of database that
+wasn’t covered in my Database Management class.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-releases&quot;&gt;Final Releases&lt;/h2&gt;
+&lt;p&gt;The last few features of my term were pretty small. I got a little experience with
+D3.js by adding a feature that would track the number of files in one of
+our products and then using this information in a graph which would show changes
+over time.&lt;/p&gt;
+
+&lt;p&gt;The next feature tracked the different package requests (release/creation), and I
+added a page with a simple date-picker so my team would be able to get these
+numbers for a specified time range.&lt;/p&gt;
+
+&lt;p&gt;My last feature was actually incorporating my second hackathon project into the
+site! See below to read about it.&lt;/p&gt;
+
+&lt;h2 id=&quot;hackathons&quot;&gt;Hackathons&lt;/h2&gt;
+&lt;p&gt;One of the really cool things about ADTRAN is that it has internal hackathons once (sometimes twice!) an iteration.
+It’s only for one day, and you work on your project during work hours, so it doesn’t require any weekend commitments
+or crazy hours (thankfully); the only requirement is that it benefits the company!&lt;/p&gt;
+
+&lt;p&gt;I participated in my first hackathon in mid February as part of my mentor’s group,
+and we won our category! I did the front end work for the project, so I
+worked with JavaScript and jQuery to display and update certain data.&lt;/p&gt;
+
+&lt;p&gt;In mid April (actually a few days before my birthday!), I participated in my
+second hackathon. This project automatically generated online documentation
+for each package using Doxygen and converted each package’s user guide into
+HTML. Just like with the Release Notes Scraper, this would generate the
+documentation/convert the user guide after a package is released and would run daily
+to catch any missing packages. We didn’t win, but I was really happy with the project
+because it was really useful to any package users at ADTRAN, and I had plenty of time
+left in the term to implement it into the site!&lt;/p&gt;
+
+&lt;p&gt;Now that I have experienced two hackathons, I really hope my future company has
+them, too!&lt;/p&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+&lt;p&gt;Like many other Computer Science students have experienced, college doesn’t really
+teach you to test your code. If we want to know that something works, we’ll run our
+code and add in some print statements. Thankfully, this isn’t how it’s done in
+the real world – at least, &lt;em&gt;I hope not&lt;/em&gt;. I learned how to test my code and how
+important testing is.&lt;/p&gt;
+
+&lt;div class=&quot;tagline&quot;&gt;&lt;h3&gt;Of course it's useful to make sure the code you're
+writing works, but it also helps to know that you didn't break any
+existing code in the process.&lt;/h3&gt;&lt;/div&gt;
+
+&lt;p&gt;We tested as much of the site as we could, so I had to write &lt;em&gt;a lot&lt;/em&gt; of tests.
+In particular, I got a lot of experience using Selenium WebDriver, a browser
+automation tool. We used Selenium WebDriver to test each of the site’s pages by
+going through actions like a typical user would and then checking that everything was working
+properly. I can’t recommend Selenium WebDriver enough.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-conclusion&quot;&gt;In Conclusion&lt;/h2&gt;
+&lt;p&gt;Overall, my first term was pretty great! I was fortunate enough to have an
+awesome mentor and get to work on things that were really interesting and fun.
+This term also taught me &lt;em&gt;so&lt;/em&gt; much about programming, Python, testing, and web development!
+This experience was very rewarding, and I hope my next term will be just as great!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 20 Jul 2015 00:00:00 -0500</pubDate>
+        <link>http://codeinpink.github.io/blog/2015/07/my-first-term-at-adtran/index.html</link>
+        <guid isPermaLink="true">http://codeinpink.github.io/blog/2015/07/my-first-term-at-adtran/index.html</guid>
+        
+        <category>work</category>
+        
+        
+        <category>general</category>
+        
+      </item>
+    
+      <item>
+        <title>Adding Autocomplete/Suggestions to Inputs Through Twitter's Typeahead</title>
+        <description>&lt;p&gt;I recently used Twitter’s JavaScript library &lt;strong&gt;typeahead.js&lt;/strong&gt; (now referred to
+as &lt;strong&gt;typeahead&lt;/strong&gt; in the rest of the post) in one of my projects,
+&lt;a href=&quot;http://mymovielib.com/&quot;&gt;MovieLib&lt;/a&gt;, and I can’t wait to use it again!
+Once I understood how to use it, it was easy to implement it into my project, and I
+think it really improved the user experience in a few areas of the site.&lt;/p&gt;
+
+&lt;p&gt;This post will show the code/styling I used to achieve the autocomplete that MovieLib uses.
+I remember I couldn’t quite get my suggestions working right when I first started out,
+so hopefully this helps out someone else!&lt;/p&gt;
+
+&lt;h2 id=&quot;some-background&quot;&gt;Some Background&lt;/h2&gt;
+&lt;p&gt;The first place I implemented typeahead is in the search bar, so users can see movie results as they
+type in the title of the movie they’re looking for. The more important place, however,
+is in one of the forms used to add movies to a user’s library.&lt;/p&gt;
+
+&lt;p&gt;By default, the form’s input for the movie field is a select field, but since MovieLib has more than
+400,000 movies in the database, loading all of those into the user’s form would &lt;em&gt;surely&lt;/em&gt;
+fail. The second option is to change the form input to a text field, which then
+presents two more options: title or id? Since one movie can share a title with many
+other movies, the title can’t be used here since the server won’t know what movie to add.
+The IMDB ID is the clear winner.&lt;/p&gt;
+
+&lt;div class=&quot;tagline&quot;&gt;&lt;h3&gt;But, that's &lt;em&gt;still&lt;/em&gt; wrong because what user would want
+to google for the IMDB ID of each movie they own &lt;em&gt;just&lt;/em&gt; to add it to their library?&lt;/h3&gt;&lt;/div&gt;
+
+&lt;p&gt;This is where typeahead comes in! The user can type the movie title into a text field,
+select the movie, and the server will get the IMDB ID of the movie selected. Crisis
+averted!&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;First, visit &lt;a href=&quot;https://github.com/twitter/typeahead.js&quot;&gt;typeahead’s github page&lt;/a&gt; and
+download &lt;a href=&quot;http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js&quot;&gt;typeahead.bundle.js&lt;/a&gt; or &lt;a href=&quot;http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js&quot;&gt;typeahead.bundle.min.js&lt;/a&gt;. This library depends
+on &lt;a href=&quot;https://jquery.com/&quot;&gt;jQuery&lt;/a&gt;, so you obviously need that, too. Make sure these files
+are included.&lt;/p&gt;
+
+&lt;h2 id=&quot;adding-typeahead-to-search-bar&quot;&gt;Adding Typeahead to Search Bar&lt;/h2&gt;
+&lt;p&gt;Add your search input if you don’t have one already, and make sure you have a way to uniquely identify this input. Mine looked like this:&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint&quot;&gt;&lt;code&gt;&amp;lt;input type=&quot;text&quot; class=&quot;form-control typeahead&quot; name=&quot;q&quot; id=&quot;q&quot; placeholder=&quot;Search Movies...&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To start with, we need to initialize our search bar’s typeahead once the page is
+done loading, so add this to your JavaScript file:&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;&lt;code&gt;$(document).ready(function() {
+    setSearchAutocomplete();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, we need to make the setSearchAutocomplete function that will be called.
+Add the following function:&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;function setSearchAutocomplete() {
+    var movies = new Bloodhound({
+        datumTokenizer: function(d) {return Bloodhound.tokenizers.whitespace(d.title); },
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        remote: {
+            url: '/autocomplete/movies?q=%QUERY%',
+            wildcard: '%QUERY%'
+        }
+    });
+
+    // .typeahead is the selector for my search bar
+    setTypeaheadBinding('.typeahead', movies);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This function creates a Bloodhound object and then calls
+a function to initialize typeahead using this Bloodhound object on the given selector.
+Bloodhound is the suggestion engine that you’re passing in when you initialize
+your instance of typeahead. Here is a break down of what each part does:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;This queryTokenizer removes the whitespace before it tokenizes the query (turns
+it into an array of string tokens)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The datumTokenizer is what tokenizes each datum. Like with the queryTokenizer,
+I want it to remove the whitespace, but I also want it to return the title of the
+datum object. Why? Because when it gets data from the
+specified URL, the server returns results in this format:
+&lt;code&gt;[{&quot;title&quot;: title &quot;imdb_id&quot;: imdb_id, &quot;plot&quot;: plot, &quot;year&quot;: year, &quot;poster&quot;: poster}, {...}, ...]&lt;/code&gt;
+I want my suggestions to be based off of the title of the movie, so that’s why I
+return the title of the datum object. Without returning the title, it will base
+suggestions off of &lt;em&gt;all&lt;/em&gt; properties of the datum object (plot, year, etc), which wouldn’t be useful.
+If you’re wondering what the other information is for, I use those in the movie
+suggestion displays (or “movie cards”).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Bloodhound can either have a local source or a remote source, and since I am dealing
+  with movie suggestions, I use remote so that it can fetch results for the given
+  query from my server&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bloodhound has other options which you can utilize, such as prefetching data, and
+you can even make your own tokenizers, but this was all I needed.&lt;/p&gt;
+
+&lt;p&gt;Now, we will finally initialize typeahead on our given element. Add the following
+function:&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;&lt;code&gt;function setTypeaheadBinding(selector, adapter) {
+    $(selector).typeahead(null, {
+        name: 'movies',
+        displayKey: 'title',
+        source: adapter.ttAdapter(),
+        templates: {
+            empty: [
+                '&amp;lt;div class=&quot;empty-message text-center&quot;&amp;gt;',
+                'No movies found.&amp;lt;br&amp;gt;',
+                '&amp;lt;a href=&quot;/search&quot; class=&quot;text-center&quot;&amp;gt;More Advanced Search&amp;lt;/a&amp;gt;',
+                '&amp;lt;/div&amp;gt;',
+            ].join('\n'),
+            suggestion: function(data) {
+                return ['&amp;lt;div class=&quot;movie-card&quot;&amp;gt;',
+                      '&amp;lt;img class=&quot;movie-card-poster&quot; src=&quot;' + data.poster + '&quot;&amp;gt;',
+                      '&amp;lt;div class=&quot;movie-card-details&quot;&amp;gt;',
+                      '&amp;lt;div class=&quot;movie-card-name&quot;&amp;gt;' + data.title + '&amp;lt;/div&amp;gt;',
+                      '&amp;lt;div class=&quot;movie-card-year pull-right&quot;&amp;gt;' + data.year + '&amp;lt;/div&amp;gt;',
+                      '&amp;lt;div class=&quot;movie-card-plot&quot;&amp;gt;' + data.plot + '&amp;lt;/div&amp;gt;',
+                      '&amp;lt;/div&amp;gt;',
+                      '&amp;lt;/div&amp;gt;'].join('\n');
+            },
+            footer: '&amp;lt;a href=&quot;/search&quot; id=&quot;view-more-movies&quot; class=&quot;btn btn-primary btn-sm text-center center-block&quot;&amp;gt;View More&amp;lt;/a&amp;gt;'
+        }
+    });
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This function initializes typeahead on the selector using the adapter passed in – the Bloodhound
+object created in the previous function. As you can see, typeahead lets you customize
+every part of the display, so you can get it to look just how you want it to look.
+Most of this initialization is just setting the templates, so here’s the CSS to go with it:&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;&lt;code&gt;/** Twitter Typeahead **/
+.twitter-typeahead, .typeahead, .empty-message  {
+    width: 100%;
+}
+
+.tt-menu {
+    background: white;
+    width: 100%;
+}
+
+.tt-suggestion {
+    overflow: hidden;
+    display: table;
+    width: 100%;
+    padding: 10px 10px;
+    border-bottom: 1px solid #e9ecf2;
+}
+
+/** Movie Card (Movie Suggestions) **/
+.movie-card {
+    position: relative;
+    padding: 8px;
+}
+
+.movie-card-poster {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #ccd6dd;
+    border-radius: 5px;
+}
+
+.movie-card:hover .movie-card-poster {
+    border-color: #f5f8fa;
+}
+
+.movie-card-details {
+    min-height: 60px;
+    padding-left: 60px;
+}
+
+.movie-card-name,
+.movie-card-year {
+    display: inline-block;
+}
+
+.movie-card-name {
+    font-weight: 700;
+}
+
+.movie-card-year {
+    color: #8899a6;
+}
+
+.movie-card:hover .movie-card-year {
+    color: #fff;
+}
+
+.movie-card-plot {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.movie-card:hover,
+.movie-card.is-active {
+    color: #fff;
+    background: #0088CC;
+    cursor: pointer;
+}
+
+.empty-message {
+    position: relative;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The suggestion display (“movie card”) for a movie is based off of the “user card”
+on Twitter and used a lot of CSS from a typeahead example. I use some helper
+classes from Bootstrap, so if you aren’t using Bootstrap, then you’ll need to add
+in the alignments yourself so things look right.&lt;/p&gt;
+
+&lt;h2 id=&quot;view-more-results&quot;&gt;View More Results&lt;/h2&gt;
+&lt;p&gt;This isn’t really anything specific to typeahead; this is just something useful.
+At the bottom of each list of suggestions, I have a link to view more results,
+and this function simply takes the current search term and includes it in the
+query. This way, when the user clicks the link, the search page will actually
+show all of the results for their current search term and not just bring them to
+a blank search page.&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;&lt;code&gt;// #view-more-movies is the link shown at the bottom of the list of suggestions
+$(document).on('click', '#view-more-movies', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    query = $(e.target).parent().parent().siblings('.tt-input').val();
+    window.location.href = '/search?q=' + encodeURIComponent(query);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;do-something-when-user-clicks-a-suggestion&quot;&gt;Do Something When User Clicks a Suggestion&lt;/h2&gt;
+&lt;p&gt;On MovieLib, when a user clicks on a suggestion from the search bar, a modal will
+pop up with info on that movie. To display that modal, I need to get the IMDB ID from the
+suggestion so I know what movie to fetch:&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;&lt;code&gt;$('.typeahead').on('typeahead:selected typeahead:autocompleted', function(e, datum) {
+    $.magnificPopup.open({
+        items: {
+            src: 'movies/view/' + datum.imdb_id
+        },
+        type: 'ajax'
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You probably aren’t using Magnific Popup, but as you can see, you can easily access
+properties of the datum object that was selected. This example also shows just how
+easy typeahead makes it to bind to certain typeahead events!
+For a full list of typeahead events you can bind to, click &lt;a href=&quot;https://github.com/twitter/typeahead.js/blob/master/doc/jquery_typeahead.md#custom-events&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-typeahead-in-forms&quot;&gt;Using Typeahead in Forms&lt;/h2&gt;
+&lt;p&gt;MovieLib also uses typeahead in the “Add Movie” forms. What the server expects
+from the form is an IMDB ID to indicate the movie being added, so when a user
+selects a movie, all I need to do is set the value of the movie input.  If you’re
+wondering why I’m using two different inputs here, it’s because of how Django
+handles form widgets. It was easier to add a second input to use for the suggestions
+and make the &lt;em&gt;actual&lt;/em&gt; movie input hidden from the user.&lt;/p&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;&lt;code&gt;// #select-movie is the input I used to initialize typeahead
+$('#select-movie').on('typeahead:selected typeahead:autocompleted', function(e, datum) {
+    // this input is the input that needs the imdb_id value
+    $('input[name=movie]').val(datum.imdb_id);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;in-conclusion&quot;&gt;In Conclusion&lt;/h2&gt;
+&lt;p&gt;So, that basically wraps it up! I recommend looking at the documentation for
+typeahead if you want to do more with it. It’s definitely a fun library
+to mess around with! To see these examples in action, check out my site below!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 19 Jul 2015 00:00:00 -0500</pubDate>
+        <link>http://codeinpink.github.io/blog/2015/07/adding-autocomplete-to-inputs-through-twitters-typeahead/index.html</link>
+        <guid isPermaLink="true">http://codeinpink.github.io/blog/2015/07/adding-autocomplete-to-inputs-through-twitters-typeahead/index.html</guid>
+        
+        <category>javascript</category>
+        
+        <category>tutorial</category>
+        
+        <category>typeahead</category>
+        
+        <category>jQuery</category>
+        
+        
+        <category>web development</category>
+        
+      </item>
+    
+      <item>
+        <title>Obligatory &quot;Hello World&quot;</title>
+        <description>&lt;p&gt;Just like how every programmer first starts with a “Hello World” program, it’s
+basically mandatory for “Hello World” to be every programmer’s first blog post!
+ So, here it is: &lt;strong&gt;Hello World!&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 27 Mar 2015 04:13:56 -0500</pubDate>
+        <link>http://codeinpink.github.io/blog/2015/03/obligatory-hello-world/index.html</link>
+        <guid isPermaLink="true">http://codeinpink.github.io/blog/2015/03/obligatory-hello-world/index.html</guid>
+        
+        
+        <category>general</category>
+        
+      </item>
+    
+  </channel>
+</rss>
