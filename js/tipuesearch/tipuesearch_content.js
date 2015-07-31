@@ -1,8 +1,8 @@
 var tipuesearch = {"pages": [
     {"title": "Home",
-    "text": "Homeeee",
+    "text": "Home.",
     "tags": "home, index",
-    "url": "http://codeinpink.github.io/#/"},
+    "url": "http://codeinpink.github.io/"},
     {"title": "About Me",
     "text": "A little about me, including my interests and some random facts!",
     "tags": "about, interests, random facts",
@@ -32,9 +32,15 @@ var tipuesearch = {"pages": [
     "url": "http://codeinpink.github.io/portfolio/babincsak-martial-arts"},
     
     
+    {"title": "codeinpink.github.io",
+    "text": "My website containing info about me, my projects, and my blog. I’ve wanted a site like this for a long time, but it’s been put off due to school, work, other projects, and laziness. After I finished my last project, I forced myself to work on and finish this so… ",
+    "tags": "web development, project, Jekyll, Ruby, JavaScript, HTML, CSS, jQuery, AJAX, Git, Responsive, and Mobile Friendly",
+    "url": "http://codeinpink.github.io/portfolio/codeinpinkgithubio"},
+    
+    
     {"title": "MovieLib",
     "text": "A website used to track your movie collection. I chose this project because I wanted to learn a back end MVC framework, and I originally picked Ruby on Rails, but learning both a framework and a new language wasn’t so easy, so instead I opted for Django, the Python, MVT… ",
-    "tags": "web development, project, Python, JavaScript, HTML, CSS, Django, Bootstrap, jQuery, PostgreSQL, AJAX, Responsive, and Mobile Friendly",
+    "tags": "web development, project, Python, JavaScript, HTML, CSS, Django, Bootstrap, jQuery, PostgreSQL, AJAX, Git, Responsive, and Mobile Friendly",
     "url": "http://codeinpink.github.io/portfolio/movielib"},
     
     
@@ -58,6 +64,6 @@ var tipuesearch = {"pages": [
     {"title": "Obligatory &quot;Hello World&quot;",
     "text": "Just like how every programmer first starts with a &#8220;Hello World&#8221; program, it&#8217;s basically mandatory for &#8220;Hello World&#8221; to be every programmer&#8217;s first blog post!  So, here it is: Hello World!  ",
     "tags": "general, ",
-    "url": "http://codeinpink.github.io/blog/2015/03/obligatory-hello-world"}
+    "url": "http://codeinpink.github.io/blog/2015/07/obligatory-hello-world"}
     
 ]};

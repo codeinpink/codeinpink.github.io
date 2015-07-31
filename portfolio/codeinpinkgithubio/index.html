@@ -10,7 +10,7 @@
     <meta name="keywords" content="Shannon Babincsak, web dev, web developer, codeinpink, portfolio">
     <meta name="author" content="Shannon Babincsak">
 
-    <title>Shannon Babincsak - MovieLib</title>
+    <title>Shannon Babincsak - codeinpink.github.io</title>
 
     <!-- FAV and TOUCH ICONS -->
     <link rel="shortcut icon" href="/img/favicon.png">
@@ -50,7 +50,7 @@
     <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet" type="text/css">
 
-    <link rel="canonical" href="http://codeinpink.github.io/portfolio/movielib/">
+    <link rel="canonical" href="http://codeinpink.github.io/portfolio/codeinpinkgithubio/">
     <link rel="alternate" type="application/rss+xml" title="Shannon Babincsak" href="http://codeinpink.github.io/feed.xml" />
 </head>
 
@@ -92,7 +92,7 @@
 
                         <!-- TITLE - column 8/12 -->
                         <div class="col-md-8 portfolio-field portfolio-title">
-                            <h2>MovieLib <span class="pl-md">web development</span></h2>
+                            <h2>codeinpink.github.io <span class="pl-md">web development</span></h2>
                         </div>
                         <!-- TITLE - column 8/12 -->
 
@@ -108,16 +108,18 @@
                     <div class="row">
                         <!-- PORTFOLIO-IMAGES - column 8/12 -->
                         <div class="col-md-6 portfolio-field">
-                            <img src="/img/projects/MovieLib-1.png" alt="A screenshot of the index page of the website MovieLib" title="Project: MovieLib" class="mb-xs">
+                            <img src="/img/projects/Codeinpink.png" alt="A screenshot of the home page of my personal website codeinpink.github.io" title="Project: codeinpink.github.io" class="mb-xs">
 
                             <div class="launch text-center">
-                                <a href="http://mymovielib.com" class="button primary" target="_blank">LAUNCH PROJECT</a>
+                                <a href="http://codeinpink.github.io/" class="button primary" target="_blank">LAUNCH PROJECT</a>
                             </div>
 
                             <h3>Technology</h3>
                             <ul class="tags">
                                 
-                                <li><a>Python</a></li>
+                                <li><a>Jekyll</a></li>
+                                
+                                <li><a>Ruby</a></li>
                                 
                                 <li><a>JavaScript</a></li>
                                 
@@ -125,13 +127,7 @@
                                 
                                 <li><a>CSS</a></li>
                                 
-                                <li><a>Django</a></li>
-                                
-                                <li><a>Bootstrap</a></li>
-                                
                                 <li><a>jQuery</a></li>
-                                
-                                <li><a>PostgreSQL</a></li>
                                 
                                 <li><a>AJAX</a></li>
                                 
@@ -149,55 +145,31 @@
                         <div class="col-md-6 portfolio-field">
                             <h3>Description</h3>
                             <div id="description">
-                                <p>A website used to track your movie collection. I chose this project because
-I wanted to learn a back end MVC framework, and I originally picked Ruby on Rails,
-but learning both a framework <em>and</em> a new language wasn’t so easy, so instead
-I opted for Django, the Python, MVT alternative. It was challenging at first,
-especially because my only experience with back end frameworks before this was Bottle,
-a <em>micro</em>framework. Once I got the hang of things, though, it all made sense, and I
-can’t wait to try out another framework!</p>
+                                <p>My website containing info about me, my projects, and my blog. I’ve wanted a site
+like this for a long time, but it’s been put off due to school, work, other projects,
+and laziness. After I finished my last project, I forced myself to work on and
+finish this so that I could finally have an online CV-like website. The picture
+and name should look familiar since this project is the site you’re currently using!</p>
 
-<p>The site uses Django as the back end, PostgreSQL as the database, and Bootstrap, jQuery,
-and various other libraries for the front end. The site features a custom user model,
-various movie-related models, friends, user-managed groups, user profiles, etc. I used
-AJAX to fetch data/content and to refresh elements of the page in response to user
-interaction, such as fetching all forms, showing notifications upon events, and refreshing
-movie tables. I also kept support for more traditional methods of using the site (~90%),
-so the user isn’t restricted to using modals or having to enable JavaScript.</p>
-
-<p>If, in the future, the site has a lot of users, I would love to add more features
-to the site. It currently focuses on “owned” movies and “wanted” movies, but I would
-like to add support for shows/series as well as “loved” movies, “want to watch” movies,
-and a feature to track borrowed movies.</p>
+<p>This site is hosted on GitHub Pages and is built using Jekyll, an awesome static site
+generator. I wrote a few custom plugins to generate category and tag pages for my blog
+and project pages out of my project data files. The site also offers searching and
+a usable contact form despite being static (thanks to Tipue Search and Formspree,
+respectively).</p>
 
                             </div>
 
                             <h3>Reflection</h3>
                             <div id="reflection">
-                                <p>This was by-far the biggest project of mine that I have worked on, and I’m
-<strong>very</strong> proud of the final result! Not only does it look <strong>awesome</strong> but it
-works well, too! One of the reasons I worked so hard and paid the money to host
-it was because I wanted a site to show off to others, and I think it accomplishes
-that!</p>
+                                <p>I love this site, and I’m so glad that it’s finally done! One of the great things
+about taking a break and returning to a project is understanding everything
+better the second time around, and I can definitely say that’s the case here.
+I forced myself to <em>really</em> understand the docs this time, and I’ve learned
+so much since the last time I worked on this project that things like
+templates, filters, paths, plugins, and even Ruby make more sense.</p>
 
-<p>If I had to change a few things, I would…</p>
-
-<ul>
-  <li>Add tests to everything. It was weird going from “TEST EVERYTHING” to
-this, and it makes me kind of uncomfortable knowing how little my code is covered</li>
-  <li>Change all GET requests of pages to simply return one page and then use jQuery
-to load a particular element from the page. Right now, I return different HTML
-depending on if the request is AJAX or not, and it wasn’t until ~5 days after
-finishing that I noticed jQuery’s load function. This definitely would have
-sped things up.</li>
-  <li>Design more first! I can’t really fault myself here because I was too eager to
-get started, but if I had known more, I would have spent more time planning the models
-and their relationships (something I had to change halfway through) and all the different
-pages/views I would need.</li>
-  <li>Use more packages/apps. Unfortunately, the problem that I faced was that
-many packages were either outdated or didn’t support Python 3. I did try to use
-what I could, but I probably could have used packages for autocomplete, friendships, and maybe more.</li>
-</ul>
+<p>I really love static site generators now, too! It’s really fun figuring out
+how to have certain functionality without a database or access to a server.</p>
 
                             </div>
                         </div>
@@ -209,15 +181,7 @@ what I could, but I probably could have used packages for autocomplete, friendsh
                             <h3>Related Projects</h3>
                             
                             <div class="col-sm-4">
-                                <a href="/portfolio/babincsak-martial-arts "><img src="/img/projects/Babincsak-Martial-Arts.png" alt="A screenshot of the home page of the website for Babincsak Martial Arts" title="Project: Babincsak Martial Arts" class="img-responsive"></a>
-                            </div>
-                            
-                            <div class="col-sm-4">
-                                <a href="/portfolio/codeinpinkgithubio "><img src="/img/projects/Codeinpink.png" alt="A screenshot of the home page of my personal website codeinpink.github.io" title="Project: codeinpink.github.io" class="img-responsive"></a>
-                            </div>
-                            
-                            <div class="col-sm-4">
-                                <a href="/portfolio/putnam-county-sheriffs-office "><img src="/img/projects/Putnam-County-Sheriffs-Office.png" alt="A screenshot of the home page of the website for Putnam County Sheriff's Office" title="Project: Putnam County Sheriff's Office" class="img-responsive"></a>
+                                <a href="/portfolio/movielib "><img src="/img/projects/MovieLib-1.png" alt="A screenshot of the index page of the website MovieLib" title="Project: MovieLib" class="img-responsive"></a>
                             </div>
                             
                         </div>

@@ -6,8 +6,8 @@
 </description>
     <link>http://codeinpink.github.io/</link>
     <atom:link href="http://codeinpink.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 30 Jul 2015 18:53:06 -0500</pubDate>
-    <lastBuildDate>Thu, 30 Jul 2015 18:53:06 -0500</lastBuildDate>
+    <pubDate>Fri, 31 Jul 2015 01:14:08 -0500</pubDate>
+    <lastBuildDate>Fri, 31 Jul 2015 01:14:08 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -200,7 +200,7 @@ awesome mentor and get to work on things that were really interesting and fun.
 This term also taught me &lt;em&gt;so&lt;/em&gt; much about programming, Python, testing, and web development!
 This experience was very rewarding, and I hope my next term will be just as great!&lt;/p&gt;
 </description>
-        <pubDate>Mon, 20 Jul 2015 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 30 Jul 2015 00:00:00 -0500</pubDate>
         <link>http://codeinpink.github.io/blog/2015/07/my-first-term-at-adtran/index.html</link>
         <guid isPermaLink="true">http://codeinpink.github.io/blog/2015/07/my-first-term-at-adtran/index.html</guid>
         
@@ -492,7 +492,7 @@ $('#select-movie').on('typeahead:selected typeahead:autocompleted', function(e, 
 typeahead if you want to do more with it. It’s definitely a fun library
 to mess around with! To see these examples in action, check out my site below!&lt;/p&gt;
 </description>
-        <pubDate>Sun, 19 Jul 2015 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 29 Jul 2015 00:00:00 -0500</pubDate>
         <link>http://codeinpink.github.io/blog/2015/07/adding-autocomplete-to-inputs-through-twitters-typeahead/index.html</link>
         <guid isPermaLink="true">http://codeinpink.github.io/blog/2015/07/adding-autocomplete-to-inputs-through-twitters-typeahead/index.html</guid>
         
@@ -515,9 +515,9 @@ to mess around with! To see these examples in action, check out my site below!&l
 basically mandatory for “Hello World” to be every programmer’s first blog post!
  So, here it is: &lt;strong&gt;Hello World!&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 27 Mar 2015 04:13:56 -0500</pubDate>
-        <link>http://codeinpink.github.io/blog/2015/03/obligatory-hello-world/index.html</link>
-        <guid isPermaLink="true">http://codeinpink.github.io/blog/2015/03/obligatory-hello-world/index.html</guid>
+        <pubDate>Sat, 25 Jul 2015 00:00:00 -0500</pubDate>
+        <link>http://codeinpink.github.io/blog/2015/07/obligatory-hello-world/index.html</link>
+        <guid isPermaLink="true">http://codeinpink.github.io/blog/2015/07/obligatory-hello-world/index.html</guid>
         
         
         <category>general</category>
