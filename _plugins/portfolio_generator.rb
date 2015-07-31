@@ -51,7 +51,7 @@ module Jekyll
 
         def get_num_matches(project1, project2, keys)
             total = 0
-            
+
             unless project1.to_a == project2.to_a
                 keys.each { |key| total += get_num_matches_for_key(project1, project2, key) }
             end
@@ -81,4 +81,14 @@ module Jekyll
 
     end
 
+    module ProjectFilter
+        def get_projects_from_files(input)
+            projects = []
+            input.each { |project| projects.push(project[1]) }
+            return projects
+        end
+    end
+
 end
+
+Liquid::Template.register_filter(Jekyll::ProjectFilter)

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Adding Autocomplete/Suggestions to Inputs Through Twitter's Typeahead"
+date: 2015-07-29
 img:
     url: /img/posts/typeahead.png
     title: "How to Add Twitter's Typeahead Library to Your Site"

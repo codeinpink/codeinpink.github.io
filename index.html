@@ -139,10 +139,8 @@ layout: default
 
                 <!-- PORTFOLIO -->
                 <div class="portfolio-items media-grid" data-layout="masonry">
-
-
-                {% for project_page in site.data.projects %}
-                    {% assign project = project_page[1] %}
+                {% assign projects = site.data.projects | get_projects_from_files | sort:'date' %}
+                {% for project in projects reversed %}
                       <!-- portfolio-item -->
                       <div class="media-cell {{ project.category | slugify }} hentry">
 

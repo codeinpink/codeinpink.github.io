@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Obligatory "Hello World"
-date:   2015-03-27 09:13:56
+date: 2015-07-25
 category: general
 type: hentry
 ---

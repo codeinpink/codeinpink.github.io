@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My First Term at ADTRAN"
+date: 2015-07-30
 img:
     url: /img/posts/adtran-2.jpeg
     title: An Overview of My First Term at ADTRAN

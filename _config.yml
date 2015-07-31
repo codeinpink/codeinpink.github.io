@@ -15,6 +15,8 @@ blog_author_description: >
 # Build settings
 markdown: kramdown
 
+exclude: ['README.md']
+
 paginate: 10
 paginate_path: /blog/page/:num/
 

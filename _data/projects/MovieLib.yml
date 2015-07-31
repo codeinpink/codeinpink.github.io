@@ -1,5 +1,5 @@
 title: MovieLib
-date: 7/15/2015
+date: 2015/07/15
 link: http://mymovielib.com
 type: website
 category: web development
@@ -61,5 +61,6 @@ technology:
         - jQuery
         - PostgreSQL
         - AJAX
+        - Git
         - Responsive
         - Mobile Friendly

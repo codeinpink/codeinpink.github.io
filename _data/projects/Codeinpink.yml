@@ -1,0 +1,42 @@
+title: codeinpink.github.io
+date: 2015/07/30
+link: http://codeinpink.github.io/
+type: website
+category: web development
+description: |
+    My website containing info about me, my projects, and my blog. I've wanted a site
+    like this for a long time, but it's been put off due to school, work, other projects,
+    and laziness. After I finished my last project, I forced myself to work on and
+    finish this so that I could finally have an online CV-like website. The picture
+    and name should look familiar since this project is the site you're currently using!
+
+    This site is hosted on GitHub Pages and is built using Jekyll, an awesome static site
+    generator. I wrote a few custom plugins to generate category and tag pages for my blog
+    and project pages out of my project data files. The site also offers searching and
+    a usable contact form despite being static (thanks to Tipue Search and Formspree,
+    respectively).
+reflection: |
+    I love this site, and I'm so glad that it's finally done! One of the great things
+    about taking a break and returning to a project is understanding everything
+    better the second time around, and I can definitely say that's the case here.
+    I forced myself to *really* understand the docs this time, and I've learned
+    so much since the last time I worked on this project that things like
+    templates, filters, paths, plugins, and even Ruby make more sense.
+
+    I really love static site generators now, too! It's really fun figuring out
+    how to have certain functionality without a database or access to a server.
+image:
+    url: /img/projects/Codeinpink.png
+    title: "Project: codeinpink.github.io"
+    alt: A screenshot of the home page of my personal website codeinpink.github.io
+technology:
+        - Jekyll
+        - Ruby
+        - JavaScript
+        - HTML
+        - CSS
+        - jQuery
+        - AJAX
+        - Git
+        - Responsive
+        - Mobile Friendly

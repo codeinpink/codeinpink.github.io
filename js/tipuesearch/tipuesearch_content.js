@@ -3,9 +3,9 @@
 
 var tipuesearch = {"pages": [
     {"title": "Home",
-    "text": "Homeeee",
+    "text": "Home.",
     "tags": "home, index",
-    "url": "{{ site.url }}/#/"},
+    "url": "{{ site.url }}/"},
     {"title": "About Me",
     "text": "A little about me, including my interests and some random facts!",
     "tags": "about, interests, random facts",
