@@ -80,7 +80,7 @@
                         <!-- PORTFOLIO RELATED PROJECTS 12/12 -->
                         <div class="col-md-12 portfolio-field">
                             <h3>Related Projects</h3>
-                            {% for project in page.related_projects max:1 %}
+                            {% for project in page.related_projects limit:3 %}
                             <div class="col-sm-4">
                                 <a href="/{{ project.dir }} "><img src="{{ project.image.url }}" alt="{{ project.image.alt }}" title="{{ project.image.title }}" class="img-responsive"></a>
                             </div>

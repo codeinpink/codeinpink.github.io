@@ -23,4 +23,3 @@ paginate_path: /blog/page/:num/
 permalink: /blog/:year/:month/:title/index.html
 
 related_project_keys: ["category", "technology"]
-related_min_common: 7
