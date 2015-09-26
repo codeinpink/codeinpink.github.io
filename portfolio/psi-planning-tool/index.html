@@ -12,7 +12,7 @@
 
     <meta name="google-site-verification" content="J1I2enqCVWPWxLX82JE84giuntMY1SztQxGovPSBLc4">
 
-    <title>Shannon Babincsak - codeinpink.github.io</title>
+    <title>Shannon Babincsak - PSI Planning Tool</title>
 
     <!-- FAV and TOUCH ICONS -->
     <link rel="shortcut icon" href="/img/favicon.png">
@@ -52,7 +52,7 @@
     <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet" type="text/css">
 
-    <link rel="canonical" href="http://codeinpink.github.io/portfolio/codeinpinkgithubio/">
+    <link rel="canonical" href="http://codeinpink.github.io/portfolio/psi-planning-tool/">
     <link rel="alternate" type="application/rss+xml" title="Shannon Babincsak" href="http://codeinpink.github.io/feed.xml" />
 </head>
 
@@ -94,7 +94,7 @@
 
                         <!-- TITLE - column 8/12 -->
                         <div class="col-md-8 portfolio-field portfolio-title">
-                            <h2>codeinpink.github.io <span class="pl-md">web development</span></h2>
+                            <h2>PSI Planning Tool <span class="pl-md">web development</span></h2>
                         </div>
                         <!-- TITLE - column 8/12 -->
 
@@ -110,30 +110,32 @@
                     <div class="row">
                         <!-- PORTFOLIO-IMAGES - column 8/12 -->
                         <div class="col-md-6 portfolio-field">
-                            <img src="/img/projects/Codeinpink.png" alt="A screenshot of the home page of my personal website codeinpink.github.io" title="Project: codeinpink.github.io" class="mb-xs">
+                            <img src="/img/projects/PSI-Planning-Tool.png" alt="A screenshot of a team page for the web application PSI Planning Tool" title="Project: PSI Planning Tool" class="mb-xs">
 
                             <div class="launch text-center">
-                                <a href="http://codeinpink.github.io/" class="button primary" target="_blank">LAUNCH PROJECT</a>
+                                <a href="http://github.com/codeinpink/project-saturn" class="button primary" target="_blank">LAUNCH PROJECT</a>
                             </div>
 
                             <h3>Technology</h3>
                             <ul class="tags">
                                 
-                                <li><a>Jekyll</a></li>
+                                <li><a>Python</a></li>
                                 
-                                <li><a>Ruby</a></li>
+                                <li><a>Django</a></li>
                                 
                                 <li><a>JavaScript</a></li>
+                                
+                                <li><a>Angular</a></li>
                                 
                                 <li><a>HTML</a></li>
                                 
                                 <li><a>CSS</a></li>
                                 
-                                <li><a>jQuery</a></li>
-                                
-                                <li><a>AJAX</a></li>
+                                <li><a>Bootstrap</a></li>
                                 
                                 <li><a>Git</a></li>
+                                
+                                <li><a>Docker</a></li>
                                 
                                 <li><a>Responsive</a></li>
                                 
@@ -147,31 +149,42 @@
                         <div class="col-md-6 portfolio-field">
                             <h3>Description</h3>
                             <div id="description">
-                                <p>My website containing info about me, my projects, and my blog. I’ve wanted a site
-like this for a long time, but it’s been put off due to school, work, other projects,
-and laziness. After I finished my last project, I forced myself to work on and
-finish this so that I could finally have an online CV-like website. The picture
-and name should look familiar since this project is the site you’re currently using!</p>
+                                <p>A web application for PSI planning. Import a list of teams and a list of features,
+and each team can then add commitments to the features they’ve been assigned,
+features belonging to other teams, or new features they add themselves.
+Teams can then add risks and dependencies for each commitment, and when they
+are done adding commitments, they can set their PSI capacity. People can view
+all the data being added on the All page which automatically refreshes data.</p>
 
-<p>This site is hosted on GitHub Pages and is built using Jekyll, an awesome static site
-generator. I wrote a few custom plugins to generate category and tag pages for my blog
-and project pages out of my project data files. The site also offers searching and
-a usable contact form despite being static (thanks to Tipue Search and Formspree,
-respectively).</p>
+<p>It originally started as a hackathon project, but I continued working on it so
+that it could be used a week and a half later for the next PSI planning! I was
+one of two people who worked on it, and I wrote all of the back end code and
+most of the front end. For the back end, I used Django so that I could get even
+more experience with the framework. On the front end, we used Angular since there
+would be a lot of data being sent back and forth, so using a two-way data binding,
+MVC framework was definitely the right decision.</p>
 
                             </div>
 
                             <h3>Reflection</h3>
                             <div id="reflection">
-                                <p>I love this site, and I’m so glad that it’s finally done! One of the great things
-about taking a break and returning to a project is understanding everything
-better the second time around, and I can definitely say that’s the case here.
-I forced myself to <em>really</em> understand the docs this time, and I’ve learned
-so much since the last time I worked on this project that things like
-templates, filters, paths, plugins, and even Ruby make more sense.</p>
+                                <p>This was so fun! I got more experience with Django, learned and got <strong>a lot</strong>
+of experience with Angular, and built something that the company actually used
+a week and a half later! In the end, 57 out of 66 teams imported used it compared
+to its alternative, so I think it’s safe to say people enjoyed it.</p>
 
-<p>I really love static site generators now, too! It’s really fun figuring out
-how to have certain functionality without a database or access to a server.</p>
+<p>Things I learned:</p>
+
+<ul>
+  <li>Django REST Framework is <strong>awesome</strong>. It’s crazy to think that in
+my last (and first) Django project I wrote <em>all</em> the API endpoints myself, and
+only <em>some</em> were RESTful. This will definitely be a staple in any future
+Django projects.</li>
+  <li>Angular is <em>also</em> <strong>awesome</strong>. Up until this project, I only ever used jQuery
+for CRUD operations, and when you have a lot of models, the code adds up.
+Angular makes <em>everything</em> so simple once you understand it, and I’m really eager
+to use more Angular as well as try out other MVC front end frameworks!</li>
+</ul>
 
                             </div>
                         </div>
@@ -184,10 +197,6 @@ how to have certain functionality without a database or access to a server.</p>
                             
                             <div class="col-sm-4">
                                 <a href="/portfolio/movielib "><img src="/img/projects/MovieLib-1.png" alt="A screenshot of the index page for the web application MovieLib" title="Project: MovieLib" class="img-responsive"></a>
-                            </div>
-                            
-                            <div class="col-sm-4">
-                                <a href="/portfolio/psi-planning-tool "><img src="/img/projects/PSI-Planning-Tool.png" alt="A screenshot of a team page for the web application PSI Planning Tool" title="Project: PSI Planning Tool" class="img-responsive"></a>
                             </div>
                             
                         </div>

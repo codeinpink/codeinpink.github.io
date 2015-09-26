@@ -40,8 +40,14 @@ var tipuesearch = {"pages": [
     
     {"title": "MovieLib",
     "text": "A website used to track your movie collection. I chose this project because I wanted to learn a back end MVC framework, and I originally picked Ruby on Rails, but learning both a framework and a new language wasn’t so easy, so instead I opted for Django, the Python, MVT… ",
-    "tags": "web development, project, Python, JavaScript, HTML, CSS, Django, Bootstrap, jQuery, PostgreSQL, AJAX, Git, Responsive, and Mobile Friendly",
+    "tags": "web development, project, Python, Django, JavaScript, HTML, CSS, Bootstrap, jQuery, PostgreSQL, AJAX, Git, Responsive, and Mobile Friendly",
     "url": "http://codeinpink.github.io/portfolio/movielib"},
+    
+    
+    {"title": "PSI Planning Tool",
+    "text": "A web application for PSI planning. Import a list of teams and a list of features, and each team can then add commitments to the features they’ve been assigned, features belonging to other teams, or new features they add themselves. Teams can then add risks and dependencies for each commitment,… ",
+    "tags": "web development, project, Python, Django, JavaScript, Angular, HTML, CSS, Bootstrap, Git, Docker, Responsive, and Mobile Friendly",
+    "url": "http://codeinpink.github.io/portfolio/psi-planning-tool"},
     
     
     {"title": "Putnam County Sheriff's Office",
