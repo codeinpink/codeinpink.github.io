@@ -129,6 +129,11 @@ ul.skill-list li strong {
 	font-size: 1.5em;
 }
 
+/* Planning to Learn */
+.planning-to-learn span {
+	color: #D0DADC;
+}
+
 /* Read Remaining */
 .readRemainingGauge {
 	background: transparent;
@@ -206,6 +211,10 @@ ul.skill-list li strong {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.success {
+	color: #5BCF80;
 }
 
 .list-inline li {
