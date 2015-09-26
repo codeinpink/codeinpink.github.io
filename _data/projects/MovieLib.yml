@@ -1,7 +1,7 @@
 title: MovieLib
 date: 2015/07/15
 link: http://mymovielib.com
-type: website
+type: web application
 category: web development
 description: |
     A website used to track your movie collection. I chose this project because
@@ -50,13 +50,13 @@ reflection: |
 image:
     url: /img/projects/MovieLib-1.png
     title: "Project: MovieLib"
-    alt: A screenshot of the index page of the website MovieLib
+    alt: A screenshot of the index page for the web application MovieLib
 technology:
         - Python
+        - Django
         - JavaScript
         - HTML
         - CSS
-        - Django
         - Bootstrap
         - jQuery
         - PostgreSQL

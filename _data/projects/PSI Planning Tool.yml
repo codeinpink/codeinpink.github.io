@@ -1,0 +1,52 @@
+title: PSI Planning Tool
+date: 2015/09/26
+link: http://github.com/codeinpink/project-saturn
+type: web application
+category: web development
+description: |
+    A web application for PSI planning. Import a list of teams and a list of features,
+    and each team can then add commitments to the features they've been assigned,
+    features belonging to other teams, or new features they add themselves.
+    Teams can then add risks and dependencies for each commitment, and when they
+    are done adding commitments, they can set their PSI capacity. People can view
+    all the data being added on the All page which automatically refreshes data.
+
+    It originally started as a hackathon project, but I continued working on it so
+    that it could be used a week and a half later for the next PSI planning! I was
+    one of two people who worked on it, and I wrote all of the back end code and
+    most of the front end. For the back end, I used Django so that I could get even
+    more experience with the framework. On the front end, we used Angular since there
+    would be a lot of data being sent back and forth, so using a two-way data binding,
+    MVC framework was definitely the right decision.
+reflection: |
+    This was so fun! I got more experience with Django, learned and got **a lot**
+    of experience with Angular, and built something that the company actually used
+    a week and a half later! In the end, 57 out of 66 teams imported used it compared
+    to its alternative, so I think it's safe to say people enjoyed it.
+
+    Things I learned:
+
+    - Django REST Framework is **awesome**. It's crazy to think that in
+    my last (and first) Django project I wrote *all* the API endpoints myself, and
+    only *some* were RESTful. This will definitely be a staple in any future
+    Django projects.
+    - Angular is *also* **awesome**. Up until this project, I only ever used jQuery
+    for CRUD operations, and when you have a lot of models, the code adds up.
+    Angular makes *everything* so simple once you understand it, and I'm really eager
+    to use more Angular as well as try out other MVC front end frameworks!
+image:
+    url: /img/projects/PSI-Planning-Tool.png
+    title: "Project: PSI Planning Tool"
+    alt: A screenshot of a team page for the web application PSI Planning Tool
+technology:
+        - Python
+        - Django
+        - JavaScript
+        - Angular
+        - HTML
+        - CSS
+        - Bootstrap
+        - Git
+        - Docker
+        - Responsive
+        - Mobile Friendly
