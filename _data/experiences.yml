@@ -28,6 +28,8 @@
   current: Yes
   start: August 2015
   end: December 2015
+  blog_post: /blog/2015/09/my-second-term-at-adtran-first-month/
   summary: |
-    I'll be returning to ADTRAN in a few weeks for my second term as a co-op!
-    Stay tuned.
+    So far, I've worked on a variety of things! I've gotten to develop a plugin
+    in Wordpress using PHP and JavaScript, work on cross browser compatibility,
+    and develop a fully functional PSI planning web app using Django and Angular.
