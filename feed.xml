@@ -6,9 +6,109 @@
 </description>
     <link>http://codeinpink.github.io/</link>
     <atom:link href="http://codeinpink.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Sep 2015 11:29:46 -0500</pubDate>
-    <lastBuildDate>Sat, 26 Sep 2015 11:29:46 -0500</lastBuildDate>
+    <pubDate>Sat, 26 Sep 2015 20:56:15 -0500</pubDate>
+    <lastBuildDate>Sat, 26 Sep 2015 20:56:15 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>My Second Term at ADTRAN: First Month</title>
+        <description>&lt;p&gt;I returned in August for my second term as a co-op, and this term I got the &lt;strong&gt;UX/UI
+team&lt;/strong&gt;, a team I really wanted. Over the summer, I learned Django, a MVT back end
+framework, but I didn’t know any MVC front end frameworks yet. Spending a term
+with these guys would &lt;em&gt;definitely&lt;/em&gt; teach me more about front end development since
+that’s all I would be doing! &lt;em&gt;Well, that’s what I thought, at least&lt;/em&gt;. The first month has actually been an interesting
+mix of work. I’m &lt;em&gt;supposed&lt;/em&gt; to develop the front end for key products using Angular,
+but outside of ensuring cross-browser compatibility, all of my development has been
+for miscellaneous (and unplanned) things!&lt;/p&gt;
+
+&lt;h2 id=&quot;wordpress-plugin&quot;&gt;Wordpress Plugin&lt;/h2&gt;
+&lt;p&gt;My first task was to update one of our internal training sites and add a way to
+track who has seen what videos. Surprisingly, a Wordpress plugin that does &lt;em&gt;just&lt;/em&gt; this
+&lt;strong&gt;doesn’t actually exist&lt;/strong&gt;. I had to write my own plugin, and since I hadn’t written
+a Wordpress plugin before (or used PHP in a few years), this was &lt;strong&gt;pretty daunting&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thankfully, there were plugins I could look at to get a general idea of what I
+needed to do, but what I noticed was that developing a plugin for Wordpress &lt;em&gt;kind
+of sucks&lt;/em&gt; – at least, as a beginner. There’s no structure. &lt;em&gt;None&lt;/em&gt;. One plugin had all of its code in one long
+file, and another had at least separated its views from its controllers, but that one still
+had some functions ~50 lines long. Ultimately, I suppose it &lt;em&gt;is&lt;/em&gt; up to &lt;em&gt;us&lt;/em&gt;, the developers, to
+structure our code, but I really do appreciate how some frameworks really force the
+idea of “separation of concerns.” I also appreciate MVC/T frameworks in general, which
+again goes back to my complaint about lack of structure.&lt;/p&gt;
+
+&lt;p&gt;In the end, I wrote a Wordpress plugin in PHP and JavaScript to track, display, and export
+video plays and the users associated with the plays. While I had complained earlier, my
+plugin was &lt;em&gt;too small&lt;/em&gt; to even be concerned about structure, and like I said, the
+responsibility is on &lt;em&gt;us&lt;/em&gt;, the developers, to write good code. Now that I somewhat
+understand how to write a Wordpress plugin, I don’t think it’s too bad. It’s actually
+kind of fun!&lt;/p&gt;
+
+&lt;h2 id=&quot;cross-browser-compatibility&quot;&gt;Cross Browser Compatibility&lt;/h2&gt;
+&lt;p&gt;Everyone loves to joke about how crappy IE is, but you don’t &lt;strong&gt;truly&lt;/strong&gt; understand
+until you’re trying to make something compatible with it. My problems with IE started
+before I could even look at the debugger, &lt;strong&gt;literally&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;tagline&quot;&gt;&lt;h3&gt;I couldn't even use the debugger. The browser
+itself would show a stack trace whenever I tried to open it.&lt;/h3&gt;&lt;/div&gt;
+
+&lt;p&gt;Do you know how hard it is to fix &lt;strong&gt;major&lt;/strong&gt; CSS issues in IE without using the
+debugger? It’s even more difficult when some problems exist in IE10 but not IE11,
+and &lt;em&gt;especially&lt;/em&gt; when they exist in IE11 but not IE10 – which, by the way,
+makes me wonder: &lt;strong&gt;how is that even possible?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thankfully, when I restarted my computer the next week the problem went away, so I could
+finally use my debugger and actually test on IE10. I can say with certainty, however, that the
+time spent fixing these IE issues was the most bored I have ever been at work. I
+actually &lt;em&gt;dreaded&lt;/em&gt; going to work because of how &lt;strong&gt;boring&lt;/strong&gt; it was. Eek.&lt;/p&gt;
+
+&lt;p&gt;Now that I have worked on making something compatible in IE, it actually &lt;strong&gt;scares&lt;/strong&gt; me
+to think about what all of my sites might look like in that browser. I saw some &lt;strong&gt;weird
+stuff&lt;/strong&gt;, man.&lt;/p&gt;
+
+&lt;h2 id=&quot;hackathon--psi-planning-tool&quot;&gt;Hackathon / PSI Planning Tool&lt;/h2&gt;
+&lt;p&gt;I also participated in my third hackathon! My team’s project was a PSI planning tool
+that teams could hopefully use a week and a half later for PSI planning. Our goal
+for the hackathon was a web app in which teams could commit to features and add risks and
+dependencies for each commitment, preferably using some type of wizard to make the process more
+enjoyable. We had something like this for the hackathon, though the wizard that
+someone on our team worked on was completely separate and was never hooked up
+to the rest of the app or the back end and was discarded afterwards. We were definitely
+too optimistic about how much the three of us could accomplish in one day!&lt;/p&gt;
+
+&lt;p&gt;Two of us continued working on the tool once the hackathon was over, but I ended up
+doing all of the back end and most of the front end. This gave me pretty good
+experience with Django and Angular. I knew Django going into this, but it’s always
+good to solidify things, and I got to try out Django REST Framework which I now love.
+Seriously. I went into the hackathon thinking the package wouldn’t do what I needed it to do
+and that I would have to write the all of the urls and queries myself, but Django REST Framework
+is super flexible and customizable. I also finally got to learn and use &lt;strong&gt;a lot&lt;/strong&gt; of Angular!
+MVC front end frameworks are great, and I’m excited now that I finally know one!&lt;/p&gt;
+
+&lt;p&gt;The company used it for PSI planning! If you want to read more, you can
+&lt;a href=&quot;/#/portfolio/portfolio/psi-planning-tool&quot;&gt;view the project entry&lt;/a&gt; for it, and if
+you want to see (or even use) the project, you can
+&lt;a href=&quot;http://github.com/codeinpink/project-saturn&quot;&gt;view it on GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned for more info about the rest of my term!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Sep 2015 00:00:00 -0500</pubDate>
+        <link>http://codeinpink.github.io/blog/2015/09/my-second-term-at-adtran-first-month/index.html</link>
+        <guid isPermaLink="true">http://codeinpink.github.io/blog/2015/09/my-second-term-at-adtran-first-month/index.html</guid>
+        
+        <category>work</category>
+        
+        <category>wordpress</category>
+        
+        <category>angular</category>
+        
+        <category>django</category>
+        
+        <category>hackathon</category>
+        
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>My First Term at ADTRAN</title>

@@ -57,6 +57,11 @@ var tipuesearch = {"pages": [
     
 
     
+    {"title": "My Second Term at ADTRAN: First Month",
+    "text": "I returned in August for my second term as a co-op, and this term I got the UX/UI team, a team I really wanted. Over the summer, I learned Django, a MVT back end framework, but I didn&#8217;t know any MVC front end frameworks yet. Spending a term with these guys would definitely teach me more about front end development since that&#8217;s all I would be doing! Well, that&#8217;s what I thought, at least. The first month has actually been an interesting mix of work. I&#8217;m supposed to develop the front end for key products using Angular, but outside of ensuring cross-browser compatibility, all of my development has been for miscellaneous (and unplanned) things!  ",
+    "tags": "general, work, wordpress, angular, django, and hackathon",
+    "url": "http://codeinpink.github.io/blog/2015/09/my-second-term-at-adtran-first-month"},
+    
     {"title": "My First Term at ADTRAN",
     "text": "When I accepted an offer to co-op at ADTRAN, I was initially worried about what I&#8217;d work on. ADTRAN is in the telecommunications industry, so most of their software developers probably work on embedded programming. My resume had a lot on it, but all of the recent things were web-related, and I wanted to learn back end web development. However, I also wanted to work on something that wouldn&#8217;t just be a typical CRUD application. Would I find a fit? Would I enjoy my work?  ",
     "tags": "general, work",
