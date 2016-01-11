@@ -25,11 +25,11 @@
 - title: Co-op
   company: ADTRAN
   location: "Huntsville, AL"
-  current: Yes
   start: August 2015
   end: December 2015
   blog_post: /blog/2015/09/my-second-term-at-adtran-first-month/
   summary: |
-    So far, I've worked on a variety of things! I've gotten to develop a plugin
-    in Wordpress using PHP and JavaScript, work on cross browser compatibility,
-    and develop a fully functional PSI planning web app using Django and Angular.
+    I worked on a variety of things this term! My work ranged from developing a plugin
+    in Wordpress using PHP and JavaScript, to working on cross browser compatibility,
+    developing a fully functional PSI planning web app using Django and Angular, and
+    working on the UI for a next generation network management platform.
