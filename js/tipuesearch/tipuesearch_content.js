@@ -57,6 +57,11 @@ var tipuesearch = {"pages": [
     
 
     
+    {"title": "My Latest Z-index Problem",
+    "text": "Two months ago I launched a site for a gaming project that I&#8217;m involved in.  I received a lot of good feedback from people, but it wasn&#8217;t long before I had my first bug report, something I was expecting from my lack of browser testing: the navigation dropdown on iPhones was behind the home page content.  Great.  ",
+    "tags": "web development, css and ios",
+    "url": "http://codeinpink.github.io/blog/2016/05/my-latest-z-index-problem"},
+    
     {"title": "My Second Term at ADTRAN: First Month",
     "text": "I returned in August for my second term as a co-op, and this term I got the UX/UI team, a team I really wanted. Over the summer, I learned Django, a MVT back end framework, but I didn&#8217;t know any MVC front end frameworks yet. Spending a term with these guys would definitely teach me more about front end development since that&#8217;s all I would be doing! Well, that&#8217;s what I thought, at least. The first month has actually been an interesting mix of work. I&#8217;m supposed to develop the front end for key products using Angular, but outside of ensuring cross-browser compatibility, all of my development has been for miscellaneous (and unplanned) things!  ",
     "tags": "general, work, wordpress, angular, django, and hackathon",

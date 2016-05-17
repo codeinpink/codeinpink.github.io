@@ -6,9 +6,59 @@
 </description>
     <link>http://codeinpink.github.io/</link>
     <atom:link href="http://codeinpink.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Jan 2016 03:26:09 -0600</pubDate>
-    <lastBuildDate>Mon, 11 Jan 2016 03:26:09 -0600</lastBuildDate>
+    <pubDate>Tue, 17 May 2016 15:55:05 -0500</pubDate>
+    <lastBuildDate>Tue, 17 May 2016 15:55:05 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>My Latest Z-index Problem</title>
+        <description>&lt;p&gt;Two months ago I launched a site for a gaming project that I’m involved in.  I
+received a lot of good feedback from people, but it wasn’t long before I had my
+first bug report, something I was expecting from my lack of browser testing: the
+navigation dropdown on iPhones was behind the home page content.  &lt;em&gt;Great&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;You could probably guess that I was using Bootstrap (&lt;strong&gt;correct&lt;/strong&gt;), and if you have
+a decent understanding of CSS, you also know just by looking at the image that it’s a
+z-index issue.  Somehow, &lt;em&gt;only on iPhones&lt;/em&gt;, the navbar was showing behind the other
+content on the page.  No other device/platform had this problem.  One thing you
+probably &lt;em&gt;don’t&lt;/em&gt; know is that the screenshot
+isn’t mine because &lt;strong&gt;I don’t even own an iPhone&lt;/strong&gt;.  Nothing quite like blindly trying to solve
+a platform-specific bug.&lt;/p&gt;
+
+&lt;p&gt;I specified z-index on various elements (nav, nav elements, carousel, announcements, etc.) – &lt;strong&gt;nothing&lt;/strong&gt;.
+I googled, tried a few suggestions on Stack Overflow – &lt;strong&gt;nothing&lt;/strong&gt;.  What the hell?
+That’s when I came across &lt;a href=&quot;http://sevenspark.com/diagnosis/z-index-submenu-hidden-behind-content&quot; target=&quot;_blank&quot;&gt;this article&lt;/a&gt;.
+I didn’t even have to read all of the article to identify the issue.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-solution&quot;&gt;The Solution&lt;/h2&gt;
+&lt;p&gt;At some point &lt;code&gt;position: static&lt;/code&gt; had made its way into my styling of &lt;code&gt;.navbar&lt;/code&gt;.
+I don’t know if it came from one of the suggestions on Stack Overflow or something else,
+but it was the problem.  Like the article says, &lt;strong&gt;z-index only affects elements with position –
+NOT STATIC ELEMENTS.&lt;/strong&gt;  Sure enough, I removed that styling and my nav-related
+z-index additions worked.&lt;/p&gt;
+
+&lt;p&gt;This frustrating (&lt;em&gt;and small&lt;/em&gt;) bug taught me or reminded me of a few things:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Don’t use &lt;code&gt;position: static&lt;/code&gt; when also specifying z-index&lt;/li&gt;
+  &lt;li&gt;I’m still not a master at CSS&lt;/li&gt;
+  &lt;li&gt;Most people aren’t masters at CSS, either&lt;/li&gt;
+  &lt;li&gt;Cross browser testing is still very important (&lt;em&gt;and valuable&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 17 May 2016 00:00:00 -0500</pubDate>
+        <link>http://codeinpink.github.io/blog/2016/05/my-latest-z-index-problem/index.html</link>
+        <guid isPermaLink="true">http://codeinpink.github.io/blog/2016/05/my-latest-z-index-problem/index.html</guid>
+        
+        <category>css</category>
+        
+        <category>ios</category>
+        
+        
+        <category>web development</category>
+        
+      </item>
     
       <item>
         <title>My Second Term at ADTRAN: First Month</title>
