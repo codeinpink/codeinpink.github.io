@@ -395,6 +395,17 @@ title: Home
                             </ul>
                             <!-- Awards/Honors -->
 
+                            <!-- Talks/Presentations -->
+                            <h2 class="section-title"><span><i class="icon-mic"></i>TALKS/PRESENTATIONS</span></h2>
+                            <ul style="list-style: none;">
+                            {% for talk in site.data.talks reversed %}
+                                <li>{{ talk.title }} <span class="pull-right">{{ talk.date }}</span><br>
+                                    <span class="alt-description">{{ talk.description }}</span>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                            <!-- Talks/Presentations -->
+
                             <!-- Planning to Learn -->
                             <h2 class="section-title"><span><i class="icon-college"></i>PLANNING TO LEARN</span></h2>
                             <p>I've already used these things before, but I can't say that I <em>really</em> understand them yet. So I hope
