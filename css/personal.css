@@ -130,7 +130,7 @@ ul.skill-list li strong {
 }
 
 /* Planning to Learn */
-.planning-to-learn span {
+.planning-to-learn span, .alt-description {
 	color: #D0DADC;
 }
 
@@ -147,6 +147,15 @@ ul.skill-list li strong {
 }
 
 /* Blog */
+.footer-notes {
+	margin-top: 100px;
+}
+
+.footer-notes ul {
+	list-style: none;
+	padding-left: 0;
+}
+
 .blog-filter {
 	margin: 40px 0;
 }

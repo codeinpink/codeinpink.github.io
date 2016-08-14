@@ -57,6 +57,16 @@ var tipuesearch = {"pages": [
     
 
     
+    {"title": "Google, Why Have You Forsaken Me?",
+    "text": "As I sit here staring at the HTML of a virus scan warning page, I wonder where I went wrong in my life.  Is this because I kept using Visual Basic and didn&#8217;t switch to C#?  Am I being punished for not buying a WinRAR license?  Is it because I (correctly) pronounce GIF with a soft G?  ",
+    "tags": "general, google-api, rant, and creative-frugality",
+    "url": "http://codeinpink.github.io/blog/2016/08/google-why-have-you-forsaken-me"},
+    
+    {"title": "I Wish Every Work Day Was a Hackathon Day",
+    "text": "I just participated in my fifth ADTRAN hackathon and won People&#8217;s Choice for the second time.  The idea?  A HipChat bot that you can program on the fly (thanks, Pat!).  Considering it&#8217;s a chat bot and we named it Bender, the image above is very fitting.  However, while I&#8217;m still pretty happy from winning some cool swag (a t-shirt and a new mug!), part of me is sad because I have to return to daily work.  ",
+    "tags": "general, work and hackathon",
+    "url": "http://codeinpink.github.io/blog/2016/07/i-wish-every-day-was-a-hackathon-day"},
+    
     {"title": "My Latest Z-index Problem",
     "text": "Two months ago I launched a site for a gaming project that I&#8217;m involved in.  I received a lot of good feedback from people, but it wasn&#8217;t long before I had my first bug report, something I was expecting from my lack of browser testing: the navigation dropdown on iPhones was behind the home page content.  Great.  ",
     "tags": "web development, css and ios",

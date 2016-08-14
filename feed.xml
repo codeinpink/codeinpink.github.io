@@ -6,9 +6,235 @@
 </description>
     <link>http://codeinpink.github.io/</link>
     <atom:link href="http://codeinpink.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 May 2016 15:55:05 -0500</pubDate>
-    <lastBuildDate>Tue, 17 May 2016 15:55:05 -0500</lastBuildDate>
+    <pubDate>Sun, 14 Aug 2016 08:28:51 -0500</pubDate>
+    <lastBuildDate>Sun, 14 Aug 2016 08:28:51 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Google, Why Have You Forsaken Me?</title>
+        <description>&lt;p&gt;As I sit here staring at the HTML of a virus scan warning page, I wonder where I went wrong in my life.  Is this because I kept using Visual Basic and
+didn’t switch to C#?  Am I being punished for not buying a WinRAR license?  Is it because I (correctly) pronounce GIF with a soft G?&lt;/p&gt;
+
+&lt;p&gt;At this point, you may be wondering what tragic experience our Google overlords inflicted upon me.
+To really understand my pain and suffering, I need to explain what I’ve dealt with the past 48 hours.&lt;/p&gt;
+
+&lt;h1 id=&quot;my-idea&quot;&gt;My Idea&lt;/h1&gt;
+&lt;p&gt;My goal the past few days has been to change how the launcher I’m writing for my game project downloads patches.
+Before, it would connect to our temporary FTP server and struggle to download files because:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;it’s visual basic (maybe not a real reason but real enough in my eyes), and&lt;/li&gt;
+  &lt;li&gt;it’s some crappy, visual basic FTP dll&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As our need for a temporary FTP server for development transformed into a permanent need
+for deployment and distribution, we tried to find a good enough web host that was cheap enough to cover
+our bandwidth needs for ~2000 players. It also needed to not care as much as US-based companies do about DMCA notices for a dead, 10 year old
+Star Wars MMO.  This search was proving difficult.&lt;/p&gt;
+
+&lt;p&gt;That’s when it hit me.  We’ve been using Google Drive to distribute the game files to our players.  It’s free.
+If the files get taken down then we can easily make a new account.  Why not use Google Drive as our CDN/patch server?&lt;/p&gt;
+
+&lt;h1 id=&quot;cue-my-creative-and-inevitable-struggle&quot;&gt;Cue My Creative and Inevitable Struggle&lt;/h1&gt;
+
+&lt;h2 id=&quot;predictability&quot;&gt;Predictability&lt;/h2&gt;
+&lt;p&gt;I started writing a script in Python that generates a &lt;code&gt;manifest.json&lt;/code&gt; that would contain all the patches and their relevant information,
+such as the checksum and file path.  Still riding the high from discovering a new way to be
+cheap and take advantage of the free resources out there, I coded away under the assumption that Google Drive files
+have predictable URLs – as if my years of using Google Drive as an online file storage suddenly vanished.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;They aren’t predictable.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;iframe src=&quot;//giphy.com/embed/CtoJMGuws3mqQ?html5=true&quot; width=&quot;480&quot; height=&quot;270&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed center-block&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Whoops.&lt;/p&gt;
+
+&lt;h2 id=&quot;api-time&quot;&gt;API Time&lt;/h2&gt;
+&lt;p&gt;So now my only option was to use an API to get the list of files for this &lt;em&gt;public-to-literally-anyone-on-the-internet folder&lt;/em&gt;.  Why am I emphasizing
+the &lt;em&gt;public-to-literally-anyone-on-the-internet&lt;/em&gt; part?  Because I figured I should be able to just query some REST endpoint to
+get the data I need for this &lt;em&gt;public-to-literally-anyone-on-the-internet folder&lt;/em&gt; and its &lt;em&gt;public-to-literally-anyone-on-the-internet files&lt;/em&gt;,
+but Google doesn’t agree.&lt;/p&gt;
+
+&lt;p&gt;Guess what, kids?  You need to be &lt;strong&gt;authorized&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;So I set up a bunch of API keys (took me a few times to figure out the one I &lt;em&gt;actually&lt;/em&gt; needed) and downloaded one of their starter scripts that
+took care of most of the work for me.  I ran it, hoping to see it print a list of 10 Google Drive files as specified in the script.  Instead
+what I got was my internet browser prompting me to select which of my 10 Google accounts to use and if I wanted to allow
+the script to view some information about my files.&lt;/p&gt;
+
+&lt;p&gt;Wat?&lt;/p&gt;
+
+&lt;p&gt;Why do I need to explicitly give permission to view files that I already made public to literally anyone on the internet? &lt;a href=&quot;#footer-note-1&quot; id=&quot;footer-reference-1&quot;&gt;&lt;sup&gt;[1]&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pagesize-what-pagesize&quot;&gt;pageSize? What pageSize?&lt;/h2&gt;
+&lt;p&gt;Moving on, I discovered a few pleasant things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Google generates a MD5 checksum for each file, saving me time and effort&lt;/li&gt;
+  &lt;li&gt;Each file has a mime type (yes, even that &lt;code&gt;application/vnd.google-apps.folder&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;You can view the parents of a file and use it to create a folder structure&lt;/li&gt;
+  &lt;li&gt;Each file actually has a &lt;em&gt;ton&lt;/em&gt; of information (not that I need most of it)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The bad things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You have to explicitly request each field you want, such as &lt;code&gt;fields=&quot;files(id, name, md5Checksum, size)&lt;/code&gt;.
+I tried to use the docs and the try-it-yourself REST interface to get the list of fields I needed, but sadly some fields didn’t
+work.  Rather than play the guessing game, it was easier to just do &lt;code&gt;fields=&quot;files&quot;&lt;/code&gt; and call it a day (thanks, Stack Overflow! (sorry, Google server)).&lt;/li&gt;
+  &lt;li&gt;Specifying &lt;code&gt;pageSize&lt;/code&gt;, contrary to what the docs say, doesn’t actually work.  No matter what value you give it, it will always
+return 100 results.  You’ll need to use that &lt;code&gt;pageToken&lt;/code&gt;.  Sorry!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;download-pls&quot;&gt;Download Pls&lt;/h2&gt;
+&lt;p&gt;The most important field is the download URL; this is for downloading patches, after all.  This field proved to be the most difficult.&lt;/p&gt;
+
+&lt;p&gt;So I have my pretty-printed json manifest that my launcher gets and uses to compute which files it needs to download.  Everything
+is going well until I try to actually download a file.  It downloads something, but not the file I wanted it to download: it’s the HTML
+of the download page.&lt;/p&gt;
+
+&lt;p&gt;Each file in the list contains a &lt;code&gt;webContentLink&lt;/code&gt;, but simply downloading each file’s &lt;code&gt;webContentLink&lt;/code&gt; isn’t going to work.  What I really
+needed to download was the response’s &lt;code&gt;ResponseUri&lt;/code&gt;.  Kind of wonky to have the launcher visit a URL only to download something else, but
+it works, I guess?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Just kidding.&lt;/strong&gt;  At least, kinda.&lt;/p&gt;
+
+&lt;p&gt;It was working… for ~200 of the files.  It downloaded them, and the checksums matched up.  Some of them weren’t working, though.
+Every restart of the program would report that it needed to download 50ish files.  My first guess was to check the checksums: was it calculating
+them correctly?  Next, maybe it was my logic.  Was I correctly accounting for case when comparing checksums?  Did I somehow mess up the conditions
+that determine when I need to download a file?&lt;/p&gt;
+
+&lt;p&gt;As I was scrolling through the files trying to figure out what it could be, something in the corner of my eye caught my attention: a
+crispy 36 KB under the Size column of my File Explorer window.  Actually, to be precise, multiple 36 KB entries.&lt;/p&gt;
+
+&lt;p&gt;Okay, maybe it’s on Google’s end.  Are they stopping my download at a certain
+size?  My search reported nothing.  If they aren’t limiting the download, then what the hell is the launcher downloading?&lt;/p&gt;
+
+&lt;p&gt;Because Atom seriously sucks for viewing large documents and while 36 KB isn’t much I don’t want to also deal with any possible disappointment
+from my favorite text editor, I threw that &lt;code&gt;patch_09.tre&lt;/code&gt; bad boy into Notepad++ and was amazed. &lt;a href=&quot;#footer-note-2&quot; id=&quot;footer-reference-2&quot;&gt;&lt;sup&gt;[2]&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I was looking at yet another HTML document.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;iframe src=&quot;//giphy.com/embed/QUCNMrMxExBeM?html5=true&quot; width=&quot;480&quot; height=&quot;360&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed center-block&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;but-wait-theres-more&quot;&gt;But Wait, There’s More!&lt;/h2&gt;
+&lt;p&gt;Google detected that I was almost done and wanted to throw one more obstacle in my path – only, this obstacle is more like tire killers
+and I just lost my 2 front tires when I was almost at the finish line.&lt;/p&gt;
+
+&lt;p&gt;If you’ve ever downloaded a large file from Google Drive, you may remember being warned about how the file size exceeded the size that Google
+can scan and that it may or may not contain a virus.  For each large file you would need to click “Download Anyway” to proceed.  See where
+I’m going with this?&lt;/p&gt;
+
+&lt;p&gt;Downloading does work… If your file is under 25 MB.  At 25 MB Google warns you about a virus, and that 36 KB warning page is
+what’s being downloaded.  50ish times.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nice.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So now I need to check the size of the file I’m about to download, and if it’s &amp;gt;= 25 MB then I need to parse that page for the download
+link inside that “Download Anyway” button since it’s randomly generated each time you refresh the page.  Doable, right?  That means it’s
+not gonna work.  Sorry.&lt;/p&gt;
+
+&lt;p&gt;Google also sets a cookie with a randomized key/value pair, and I assume it verifies that with the confirm key in the “Download Anyway” link.&lt;/p&gt;
+
+&lt;h2 id=&quot;cant-stop-wont-stop-not-really&quot;&gt;Can’t Stop, Won’t Stop (Not Really)&lt;/h2&gt;
+&lt;p&gt;Once I got to this section of the post I thought, “Hm, what if?” and attempted to work around this problem.  The key may be random, but I can
+still get it from the header, and if I can get it and set it in my next request then maybe it will work instead of returning an error.&lt;/p&gt;
+
+&lt;p&gt;Well, after 30 minutes, I can say that’s not doable. &lt;a href=&quot;#footer-note-3&quot; id=&quot;footer-reference-3&quot;&gt;&lt;sup&gt;[3]&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Maybe I’m missing some other cookies that might be needed, or maybe setting the cookies
+isn’t good enough because there’s some other magical voodoo check that Google is doing to protect all the grandmas out there from
+accidentally getting a virus instead of a picture of little Joey at soccer practice.&lt;/p&gt;
+
+&lt;iframe src=&quot;//giphy.com/embed/aMjfEsaBsbqCs?html5=true&quot; width=&quot;480&quot; height=&quot;415&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed center-block&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I could keep trying, but at this point I really need to ask myself why I keep trying to force this to happen when it so clearly
+&lt;em&gt;isn’t&lt;/em&gt; going to happen.  In Google’s eyes I’m some sinister hacker/malware-provider/something-else-bad, but really I’m just a nerd
+who wants the thousands of other Star Wars nerds to enjoy this 10 year old, shut down, non-profit Star Wars MMO without having
+to rely on even more donations to cover the bandwidth of an actual patch server.&lt;/p&gt;
+
+&lt;p&gt;After researching the alternatives, I think we’ll probably need to just spend the money on an actual server and hope for the best.
+I mourn the loss of what could have been great, though.  Google/Google Drive API crushed my frugal, creative
+dreams and let me down, and it’s time for me to go home.&lt;/p&gt;
+
+&lt;iframe src=&quot;//giphy.com/embed/3o7Zesyac4CuSN5rsA?html5=true&quot; width=&quot;480&quot; height=&quot;360&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed center-block&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Wed, 10 Aug 2016 00:00:00 -0500</pubDate>
+        <link>http://codeinpink.github.io/blog/2016/08/google-why-have-you-forsaken-me/index.html</link>
+        <guid isPermaLink="true">http://codeinpink.github.io/blog/2016/08/google-why-have-you-forsaken-me/index.html</guid>
+        
+        <category>google-api</category>
+        
+        <category>rant</category>
+        
+        <category>creative-frugality</category>
+        
+        
+        <category>general</category>
+        
+      </item>
+    
+      <item>
+        <title>I Wish Every Work Day Was a Hackathon Day</title>
+        <description>&lt;p&gt;I just participated in my &lt;em&gt;fifth&lt;/em&gt; ADTRAN hackathon and won People’s Choice for the second
+time.  The idea?  A HipChat bot that you can program on the fly (thanks, Pat!).  Considering it’s
+a chat bot and we named it Bender, the image above is &lt;em&gt;very&lt;/em&gt; fitting.  However, while I’m still pretty happy
+from winning some cool swag (a t-shirt and a new mug!), part of
+me is sad because I have to return to daily work.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I wish every work day was a hackathon day.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;but-why&quot;&gt;But Why?&lt;/h2&gt;
+
+&lt;p&gt;You might be wondering why I would &lt;em&gt;want&lt;/em&gt; to subject myself to the torture that is pulling all-nighters
+in a crowded room of people who won’t be showering the next 48 hours &lt;em&gt;every day&lt;/em&gt;.  Valid question!&lt;/p&gt;
+
+&lt;p&gt;Work hackathons are unique in that, unlike normal hackathons, you aren’t expected to pull all-nighters.
+At ADTRAN, the hackathon is just one work day, and it’s up to you how much of your time you want to
+spend on your project.  No all-nighters or crowded rooms of smelly people.&lt;/p&gt;
+
+&lt;p&gt;Now, that doesn’t mean I don’t put in &lt;em&gt;a lot&lt;/em&gt; of time, though, because I do.  I’m not going to say how late
+I’ve stayed, so I’ll just say that it’s late enough to notice how gross the elevators smell after the hot air
+has been trapped inside for hours… and late enough to have to take the stairs because the elevators stopped
+running.&lt;/p&gt;
+
+&lt;p&gt;So, while I end up working way more than my 8 hours on a hackathon day, it isn’t &lt;em&gt;required&lt;/em&gt; or forced.  I don’t
+have to subject myself to any suffering as a result of staying up 24 hours and staring at a computer screen for almost
+that long (I can already imagine the killer headache I’d have).  It’s pleasant!&lt;/p&gt;
+
+&lt;h2 id=&quot;fun-fun-fun&quot;&gt;Fun Fun Fun&lt;/h2&gt;
+&lt;p&gt;So why do I want every work day to be a hackathon day?  Because it brings me back to school when we could make our
+own teams and work on something &lt;strong&gt;fun&lt;/strong&gt; together.  You could talk and crack jokes as long as you got the work done.
+It was work, but it didn’t &lt;em&gt;feel&lt;/em&gt; like work.  That’s the best kind.&lt;/p&gt;
+
+&lt;p&gt;Don’t get me wrong.  I also enjoy being able to work on new or different technologies that I don’t normally get to
+use at work; even one of my favorite projects started out as a hackathon project.  When I look back on all my hackathons, though,
+my best hackathon memories are just experiences from working with a groups of friends, like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Demoing our &lt;strike&gt;crappy&lt;/strike&gt; very simple “ADTRAN Life Alert” mobile app for the first time (yes, it’s as awesome as you think it is)&lt;/li&gt;
+  &lt;li&gt;Photoshopping &lt;a href=&quot;http://programmer.97things.oreilly.com/wiki/images/8/82/UncleBob.jpg&quot;&gt;Uncle Bob&lt;/a&gt; saving the Life Alert lady in front of a TA5K in an ADTRAN lab (done by &lt;em&gt;yours truly&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;Discovering and then cursing how HipChat doesn’t support Markdown (seriously, it’s &lt;em&gt;2016&lt;/em&gt; and you’re like the &lt;em&gt;only&lt;/em&gt; chat program that doesn’t support markdown)&lt;/li&gt;
+  &lt;li&gt;Celebrating a victory after listening to two teammates struggle for hours on how to properly handle HipChat’s
+weird whitespace/encoding stuff when getting multi-line messages of what needs to be Python code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Is it possible for every work day to feel like a hackathon day?  Probably not.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Here’s to hoping, though.&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 09 Jul 2016 00:00:00 -0500</pubDate>
+        <link>http://codeinpink.github.io/blog/2016/07/i-wish-every-day-was-a-hackathon-day/index.html</link>
+        <guid isPermaLink="true">http://codeinpink.github.io/blog/2016/07/i-wish-every-day-was-a-hackathon-day/index.html</guid>
+        
+        <category>work</category>
+        
+        <category>hackathon</category>
+        
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>My Latest Z-index Problem</title>

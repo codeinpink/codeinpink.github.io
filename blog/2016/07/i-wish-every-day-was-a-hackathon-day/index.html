@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Two months ago I launched a site for a gaming project that I&#8217;m involved in.  Ireceived a lot of good feedback from people, but it wasn&#8217;t long bef...">
+    <meta name="description" content="I just participated in my fifth ADTRAN hackathon and won People&#8217;s Choice for the secondtime.  The idea?  A HipChat bot that you can program on the fly ...">
     <meta name="keywords" content="Shannon Babincsak, web dev, web developer, codeinpink, portfolio">
     <meta name="author" content="Shannon Babincsak">
 
     <meta name="google-site-verification" content="J1I2enqCVWPWxLX82JE84giuntMY1SztQxGovPSBLc4">
 
-    <title>Shannon Babincsak - My Latest Z-index Problem</title>
+    <title>Shannon Babincsak - I Wish Every Work Day Was a Hackathon Day</title>
 
     <!-- FAV and TOUCH ICONS -->
     <link rel="shortcut icon" href="/img/favicon.png">
@@ -51,7 +51,7 @@
     <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet" type="text/css">
 
-    <link rel="canonical" href="http://codeinpink.github.io/blog/2016/05/my-latest-z-index-problem/">
+    <link rel="canonical" href="http://codeinpink.github.io/blog/2016/07/i-wish-every-day-was-a-hackathon-day/">
     <link rel="alternate" type="application/rss+xml" title="Shannon Babincsak" href="http://codeinpink.github.io/feed.xml" />
 </head>
 
@@ -92,7 +92,7 @@
 <article class="post type-post format-standard hentry">
     <!-- .entry-header -->
     <header class="entry-header">
-    <h1 class="entry-title">My Latest Z-index Problem</h1>
+    <h1 class="entry-title">I Wish Every Work Day Was a Hackathon Day</h1>
     </header>
     <!-- .entry-header -->
 
@@ -100,12 +100,12 @@
     <div class="entry-meta">
         <span class="posted-in">
             posted in
-        	<a href="/blog/categories/web-development/" title="View all posts in this category">Web development</a>
+        	<a href="/blog/categories/general/" title="View all posts in this category">General</a>
         </span>
 
         <span class="posted-on">
             on
-            <a rel="bookmark"><time class="entry-date">May 17, 2016</time></a>
+            <a rel="bookmark"><time class="entry-date">July 9, 2016</time></a>
         </span>
 
 
@@ -119,47 +119,59 @@
     
     <!-- .featured-image -->
     <div class="featured-image">
-        <img src="/img/posts/z-index.png" alt="A screenshot of the iOS navigation bug" title="My Recent Z-index Bug">
+        <img src="/img/posts/hackathon-icon.png" alt="A cute hackathon robot icon" title="Why I Wish Every Work Day Was a Hackathon Day">
     </div>
     <!-- .featured-image -->
     
 
     <!-- .entry-content -->
     <div class="entry-content">
-        <p>Two months ago I launched a site for a gaming project that I’m involved in.  I
-received a lot of good feedback from people, but it wasn’t long before I had my
-first bug report, something I was expecting from my lack of browser testing: the
-navigation dropdown on iPhones was behind the home page content.  <em>Great</em>.</p>
+        <p>I just participated in my <em>fifth</em> ADTRAN hackathon and won People’s Choice for the second
+time.  The idea?  A HipChat bot that you can program on the fly (thanks, Pat!).  Considering it’s
+a chat bot and we named it Bender, the image above is <em>very</em> fitting.  However, while I’m still pretty happy
+from winning some cool swag (a t-shirt and a new mug!), part of
+me is sad because I have to return to daily work.</p>
 
-<h2 id="the-problem">The Problem</h2>
-<p>You could probably guess that I was using Bootstrap (<strong>correct</strong>), and if you have
-a decent understanding of CSS, you also know just by looking at the image that it’s a
-z-index issue.  Somehow, <em>only on iPhones</em>, the navbar was showing behind the other
-content on the page.  No other device/platform had this problem.  One thing you
-probably <em>don’t</em> know is that the screenshot
-isn’t mine because <strong>I don’t even own an iPhone</strong>.  Nothing quite like blindly trying to solve
-a platform-specific bug.</p>
+<p><strong>I wish every work day was a hackathon day.</strong></p>
 
-<p>I specified z-index on various elements (nav, nav elements, carousel, announcements, etc.) – <strong>nothing</strong>.
-I googled, tried a few suggestions on Stack Overflow – <strong>nothing</strong>.  What the hell?
-That’s when I came across <a href="http://sevenspark.com/diagnosis/z-index-submenu-hidden-behind-content" target="_blank">this article</a>.
-I didn’t even have to read all of the article to identify the issue.</p>
+<h2 id="but-why">But Why?</h2>
 
-<h2 id="the-solution">The Solution</h2>
-<p>At some point <code>position: static</code> had made its way into my styling of <code>.navbar</code>.
-I don’t know if it came from one of the suggestions on Stack Overflow or something else,
-but it was the problem.  Like the article says, <strong>z-index only affects elements with position –
-NOT STATIC ELEMENTS.</strong>  Sure enough, I removed that styling and my nav-related
-z-index additions worked.</p>
+<p>You might be wondering why I would <em>want</em> to subject myself to the torture that is pulling all-nighters
+in a crowded room of people who won’t be showering the next 48 hours <em>every day</em>.  Valid question!</p>
 
-<p>This frustrating (<em>and small</em>) bug taught me or reminded me of a few things:</p>
+<p>Work hackathons are unique in that, unlike normal hackathons, you aren’t expected to pull all-nighters.
+At ADTRAN, the hackathon is just one work day, and it’s up to you how much of your time you want to
+spend on your project.  No all-nighters or crowded rooms of smelly people.</p>
 
-<ol>
-  <li>Don’t use <code>position: static</code> when also specifying z-index</li>
-  <li>I’m still not a master at CSS</li>
-  <li>Most people aren’t masters at CSS, either</li>
-  <li>Cross browser testing is still very important (<em>and valuable</em>)</li>
-</ol>
+<p>Now, that doesn’t mean I don’t put in <em>a lot</em> of time, though, because I do.  I’m not going to say how late
+I’ve stayed, so I’ll just say that it’s late enough to notice how gross the elevators smell after the hot air
+has been trapped inside for hours… and late enough to have to take the stairs because the elevators stopped
+running.</p>
+
+<p>So, while I end up working way more than my 8 hours on a hackathon day, it isn’t <em>required</em> or forced.  I don’t
+have to subject myself to any suffering as a result of staying up 24 hours and staring at a computer screen for almost
+that long (I can already imagine the killer headache I’d have).  It’s pleasant!</p>
+
+<h2 id="fun-fun-fun">Fun Fun Fun</h2>
+<p>So why do I want every work day to be a hackathon day?  Because it brings me back to school when we could make our
+own teams and work on something <strong>fun</strong> together.  You could talk and crack jokes as long as you got the work done.
+It was work, but it didn’t <em>feel</em> like work.  That’s the best kind.</p>
+
+<p>Don’t get me wrong.  I also enjoy being able to work on new or different technologies that I don’t normally get to
+use at work; even one of my favorite projects started out as a hackathon project.  When I look back on all my hackathons, though,
+my best hackathon memories are just experiences from working with a groups of friends, like:</p>
+
+<ul>
+  <li>Demoing our <strike>crappy</strike> very simple “ADTRAN Life Alert” mobile app for the first time (yes, it’s as awesome as you think it is)</li>
+  <li>Photoshopping <a href="http://programmer.97things.oreilly.com/wiki/images/8/82/UncleBob.jpg">Uncle Bob</a> saving the Life Alert lady in front of a TA5K in an ADTRAN lab (done by <em>yours truly</em>)</li>
+  <li>Discovering and then cursing how HipChat doesn’t support Markdown (seriously, it’s <em>2016</em> and you’re like the <em>only</em> chat program that doesn’t support markdown)</li>
+  <li>Celebrating a victory after listening to two teammates struggle for hours on how to properly handle HipChat’s
+weird whitespace/encoding stuff when getting multi-line messages of what needs to be Python code</li>
+</ul>
+
+<p>Is it possible for every work day to feel like a hackathon day?  Probably not.</p>
+
+<p><strong>Here’s to hoping, though.</strong></p>
 
 
         
@@ -176,7 +188,7 @@ z-index additions worked.</p>
                 
                 <li><a href="/blog/2016/08/google-why-have-you-forsaken-me" rel="bookmark">Google, Why Have You Forsaken Me?</a></li>
                 
-                <li><a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day" rel="bookmark">I Wish Every Work Day Was a Hackathon Day</a></li>
+                <li><a href="/blog/2016/05/my-latest-z-index-problem" rel="bookmark">My Latest Z-index Problem</a></li>
                 
                 <li><a href="/blog/2015/09/my-second-term-at-adtran-first-month" rel="bookmark">My Second Term at ADTRAN: First Month</a></li>
                 
@@ -192,9 +204,9 @@ z-index additions worked.</p>
     <footer class="entry-meta">
         <h3>TAGS</h3>
         
-        <a href="/blog/tagged/css" title="View all posts with this tag">css</a>
+        <a href="/blog/tagged/work" title="View all posts with this tag">work</a>
         
-        <a href="/blog/tagged/ios" title="View all posts with this tag">ios</a>
+        <a href="/blog/tagged/hackathon" title="View all posts with this tag">hackathon</a>
         
     </footer>
     <!-- .entry-meta -->
@@ -235,14 +247,14 @@ z-index additions worked.</p>
     <div class="nav-previous col-sm-6">
         
         <h4>PREVIOUS POST</h4>
-        <a href="/blog/2015/09/my-second-term-at-adtran-first-month" rel="prev"><span class="meta-nav">←</span> My Second Term at ADTRAN: First Month</a>
+        <a href="/blog/2016/05/my-latest-z-index-problem" rel="prev"><span class="meta-nav">←</span> My Latest Z-index Problem</a>
         
     </div>
 
     <div class="nav-next col-sm-6">
         
         <h4>NEXT POST</h4>
-        <a href="" rel="next">I Wish Every Work Day Was a Hackathon Day <span class="meta-nav">→</span></a>
+        <a href="" rel="next">Google, Why Have You Forsaken Me? <span class="meta-nav">→</span></a>
         
     </div>
 </nav>
