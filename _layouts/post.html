@@ -57,6 +57,17 @@ layout: single
         <!-- .project-action -->
         {% endif %}
 
+        {% if page.footer_notes %}
+        <div class="footer-notes">
+            <ul>
+                {% for note in page.footer_notes %}
+                {% assign loopindex = forloop.index %}
+                <li><a href="#footer-reference-{{ loopindex }}" id="footer-note-{{ loopindex }}">[{{ loopindex }}]</a> {{ note }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
         {% if page.related_articles %}
         <!-- related articles -->
         <div class="related-posts">
