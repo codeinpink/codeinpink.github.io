@@ -1,0 +1,23 @@
+title: Lollipoppy
+date: 2016/01/15
+type: browser game
+category: game development
+work-in-progress: true
+description: |
+    If I had to pick a project that represents my personality, this would be the one!
+
+    The game uses cute candy art to create an adorable "Candy Wonderland" type world.  You start collecting
+    candy as the time (represented by your life) counts down, enjoying Willy Wonka's
+    "Oompa Loompa" as you do, until suddenly the music changes.  Some creepy music
+    is now playing in your earphones...
+
+    More to come.  :)
+reflection: |
+    N/A
+image:
+    url: /img/projects/Lollipoppy.png
+    title: "Project: Lollipoppy"
+    alt: A screenshot of the game in progress
+technology:
+        - JavaScript
+        - Phaser.js

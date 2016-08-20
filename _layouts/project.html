@@ -31,7 +31,8 @@
 
                         <!-- TITLE - column 8/12 -->
                         <div class="col-md-8 portfolio-field portfolio-title">
-                            <h2>{{ page.title }} <span class="pl-md">{{ page.category }}</span></h2>
+                            <h2>{{ page.title }} {% if page.work-in-progress %} (WIP) {% endif %}
+                                <span class="pl-md">{{ page.category }}</span></h2>
                         </div>
                         <!-- TITLE - column 8/12 -->
 

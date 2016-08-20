@@ -135,6 +135,8 @@ title: Home
                   <li class="current"><a href="#" data-filter="*">ALL</a></li>
                   <li><a href="#" data-filter=".web-development">WEB DEVELOPMENT</a></li>
                   <li><a href="#" data-filter=".software-development">SOFTWARE DEVELOPMENT</a></li>
+                  <li><a href="#" data-filter=".game-development">GAME DEVELOPMENT</a></li>
+                  <li><a href="#" data-filter=".work-in-progress">WORK IN PROGRESS</a></li>
                 </ul>
                 <!--FILTERS-->
 
@@ -144,7 +146,7 @@ title: Home
                 {% assign projects = site.data.projects | get_projects_from_files | sort:'date' %}
                 {% for project in projects reversed %}
                       <!-- portfolio-item -->
-                      <div class="media-cell {{ project.category | slugify }} hentry">
+                      <div class="media-cell {{ project.category | slugify }} {% if project.work-in-progress %} work-in-progress {% endif %} hentry">
 
                         <div class="media-box">
                             <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" title="{{ project.image.title }}">
@@ -153,7 +155,7 @@ title: Home
                         </div>
 
                         <div class="media-cell-desc">
-                            <h3>{{ project.title }}</h3>
+                            <h3>{{ project.title }} {% if project.work-in-progress %} (WIP) {% endif %}</h3>
                             <p class="category">{{ project.category }}</p>
                         </div>
 
