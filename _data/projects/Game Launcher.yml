@@ -1,0 +1,62 @@
+title: Game Launcher
+date: 2016/08/19
+type: software application
+category: software development
+description: |
+    A game launcher for my Star Wars Galaxies emulation project.  I inherited this
+    from a previous developer, and while I started out just rewriting bits and pieces, by
+    the end I had completely rewritten (and redesigned!) everything.
+
+    It originally was kind of clunky and only had the ability to download files (which it struggled at doing).
+    Now the launcher has no issues checking for updates or downloading files, and it now
+    shows the server status and latest announcements, too.  I also added the ability to
+    save the username during login and to easily change the server address (for local testing
+    or when our login server IP changes).
+
+    To accompany the game launcher, I also designed the patching process, which was a
+    learning process for me.  The launcher fetches a manifest file from the server
+    and uses it to determine what files are needed.  It compares checksums of files
+    to determine when a file is outdated or incorrect.
+
+    Server-side I use PHP to generate the manifest file in JSON
+    containing the game patches and their relevant information.  This takes 20-30
+    seconds to generate, so I cache it for a length of 24 hours.
+
+    When the launcher is out of date, it will attempt to update itself by downloading
+    the latest version from the server and re-launching.
+reflection: |
+    This was my first time building a software application in Visual Studio (using
+    Visual Basic or otherwise), and it was so **convenient** and **easy** to make something
+    that looks nice!  I can't wait to use it again (although next time I'll definitely use C# instead).
+
+    Designing the patching process was a bit of trial and error.  At first, I just used the original
+    process of connecting to an FTP server and downloading anything that didn't exist locally, but connecting
+    to an FTP server to download files made me worried about what could go wrong, and when I wanted
+    to upgrade the patching process to do more than just check for file existence, using FTP made the possibilities *very* limited.
+
+    I knew I had to switch to a web server that would serve the files over HTTP.  Doing this would
+    ease any worries about downloading going wrong and would also enable me to just fetch a file's content
+    in memory insteading of being forced to download them.  I needed *that* functionality so I could
+    use a server manifest file to check what patches I need.
+
+    Before ending up at the process described in the previous section, I attempted to use Google Drive and the Google Drive API
+    for my patch server.  You can read about my creative struggle [here](https://codeinpink.github.io/blog/2016/08/google-why-have-you-forsaken-me/).
+
+    One thing I wish I had done was rewrite it in C# to begin with.  C# is used everywhere; Visual Basic, not so much.
+
+    Currently, checking for updates takes around 30 seconds because of having to compute checksums for all of the
+    local files.  I'll be updating  it in the future to use multithreading for that in hopes of making it faster.
+    If that doesn't work, maybe I'll try to cache the checksums for a small period of time.
+
+    Overall, I'm **very** happy with the launcher because it looks decent (especially compared to others out there)
+    and does its job perfectly!  I think others will love it, too.  :)
+image:
+    url: /img/projects/Launcher.png
+    title: "Project: Game Launcher"
+    alt: A screenshot of the game launcher and its settings pop up
+technology:
+        - Visual Basic
+        - PHP
+        - Python
+        - Google Drive API
+        - Git

@@ -49,9 +49,11 @@
                         <div class="col-md-6 portfolio-field">
                             <img src="{{ page.image.url }}" alt="{{ page.image.alt }}" title="{{ page.image.title }}" class="mb-xs">
 
+                            {% if page.link %}
                             <div class="launch text-center">
                                 <a href="{{ page.link }}" class="button primary" target="_blank">LAUNCH PROJECT</a>
                             </div>
+                            {% endif %}
 
                             <h3>Technology</h3>
                             <ul class="tags">
