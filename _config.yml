@@ -7,7 +7,7 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://codeinpink.github.io" # the base hostname & protocol for your site
 github_username:  codeinpink
-header_description: student, programmer, web developer, constitutional law geek
+header_description: programmer, web developer, constitutional law geek
 blog_author_description: >
   Shannon is a Computer Science/Political Science double major who loves programming,
   web development, and studying law. When she's not being productive, she

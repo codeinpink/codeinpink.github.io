@@ -1,5 +1,6 @@
 title: Lollipoppy
 date: 2016/01/15
+link: http://codeinpink.github.io/lollipoppy/
 type: browser game
 category: game development
 work-in-progress: true
@@ -21,3 +22,4 @@ image:
 technology:
         - JavaScript
         - Phaser.js
+        - Git
