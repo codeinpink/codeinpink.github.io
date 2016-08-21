@@ -12,7 +12,7 @@
 
     <meta name="google-site-verification" content="J1I2enqCVWPWxLX82JE84giuntMY1SztQxGovPSBLc4">
 
-    <title>Shannon Babincsak - PSI Planning Tool</title>
+    <title>Shannon Babincsak - Game Launcher</title>
 
     <!-- FAV and TOUCH ICONS -->
     <link rel="shortcut icon" href="/img/favicon.png">
@@ -51,7 +51,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Handlee|Oswald|Tangerine:400,700" rel="stylesheet">
 
-    <link rel="canonical" href="http://codeinpink.github.io/portfolio/psi-planning-tool/">
+    <link rel="canonical" href="http://codeinpink.github.io/portfolio/game-launcher/">
     <link rel="alternate" type="application/rss+xml" title="Shannon Babincsak" href="http://codeinpink.github.io/feed.xml" />
 </head>
 
@@ -93,8 +93,8 @@
 
                         <!-- TITLE - column 8/12 -->
                         <div class="col-md-8 portfolio-field portfolio-title">
-                            <h2>PSI Planning Tool 
-                                <span class="pl-md">web development</span></h2>
+                            <h2>Game Launcher 
+                                <span class="pl-md">software development</span></h2>
                         </div>
                         <!-- TITLE - column 8/12 -->
 
@@ -110,38 +110,22 @@
                     <div class="row">
                         <!-- PORTFOLIO-IMAGES - column 8/12 -->
                         <div class="col-md-6 portfolio-field">
-                            <img src="/img/projects/PSI-Planning-Tool.png" alt="A screenshot of a team page for the web application PSI Planning Tool" title="Project: PSI Planning Tool" class="mb-xs">
+                            <img src="/img/projects/Launcher.png" alt="A screenshot of the game launcher and its settings pop up" title="Project: Game Launcher" class="mb-xs">
 
-                            
-                            <div class="launch text-center">
-                                <a href="http://github.com/codeinpink/project-saturn" class="button primary" target="_blank">LAUNCH PROJECT</a>
-                            </div>
                             
 
                             <h3>Technology</h3>
                             <ul class="tags">
                                 
+                                <li><a>Visual Basic</a></li>
+                                
+                                <li><a>PHP</a></li>
+                                
                                 <li><a>Python</a></li>
                                 
-                                <li><a>Django</a></li>
-                                
-                                <li><a>JavaScript</a></li>
-                                
-                                <li><a>Angular</a></li>
-                                
-                                <li><a>HTML</a></li>
-                                
-                                <li><a>CSS</a></li>
-                                
-                                <li><a>Bootstrap</a></li>
+                                <li><a>Google Drive API</a></li>
                                 
                                 <li><a>Git</a></li>
-                                
-                                <li><a>Docker</a></li>
-                                
-                                <li><a>Responsive</a></li>
-                                
-                                <li><a>Mobile Friendly</a></li>
                                 
                             </ul>
                         </div>
@@ -151,58 +135,62 @@
                         <div class="col-md-6 portfolio-field">
                             <h3>Description</h3>
                             <div id="description">
-                                <p>A web application for PSI planning. Import a list of teams and a list of features,
-and each team can then add commitments to the features they’ve been assigned,
-features belonging to other teams, or new features they add themselves.
-Teams can then add risks and dependencies for each commitment, and when they
-are done adding commitments, they can set their PSI capacity. People can view
-all the data being added on the All page which automatically refreshes data.</p>
+                                <p>A game launcher for my Star Wars Galaxies emulation project.  I inherited this
+from a previous developer, and while I started out just rewriting bits and pieces, by
+the end I had completely rewritten (and redesigned!) everything.</p>
 
-<p>It originally started as a hackathon project, but I continued working on it so
-that it could be used a week and a half later for the next PSI planning! I was
-one of two people who worked on it, and I wrote all of the back end code and
-most of the front end. For the back end, I used Django so that I could get even
-more experience with the framework. On the front end, we used Angular since there
-would be a lot of data being sent back and forth, so using a two-way data binding,
-MVC framework was definitely the right decision.</p>
+<p>It originally was kind of clunky and only had the ability to download files (which it struggled at doing).
+Now the launcher has no issues checking for updates or downloading files, and it now
+shows the server status and latest announcements, too.  I also added the ability to
+save the username during login and to easily change the server address (for local testing
+or when our login server IP changes).</p>
+
+<p>To accompany the game launcher, I also designed the patching process, which was a
+learning process for me.  The launcher fetches a manifest file from the server
+and uses it to determine what files are needed.  It compares checksums of files
+to determine when a file is outdated or incorrect.</p>
+
+<p>Server-side I use PHP to generate the manifest file in JSON
+containing the game patches and their relevant information.  This takes 20-30
+seconds to generate, so I cache it for a length of 24 hours.</p>
+
+<p>When the launcher is out of date, it will attempt to update itself by downloading
+the latest version from the server and re-launching.</p>
 
                             </div>
 
                             <h3>Reflection</h3>
                             <div id="reflection">
-                                <p>This was so fun! I got more experience with Django, learned and got <strong>a lot</strong>
-of experience with Angular, and built something that the company actually used
-a week and a half later! In the end, 57 out of 66 teams imported used it compared
-to its alternative, so I think it’s safe to say people enjoyed it.</p>
+                                <p>This was my first time building a software application in Visual Studio (using
+Visual Basic or otherwise), and it was so <strong>convenient</strong> and <strong>easy</strong> to make something
+that looks nice!  I can’t wait to use it again (although next time I’ll definitely use C# instead).</p>
 
-<p>Things I learned:</p>
+<p>Designing the patching process was a bit of trial and error.  At first, I just used the original
+process of connecting to an FTP server and downloading anything that didn’t exist locally, but connecting
+to an FTP server to download files made me worried about what could go wrong, and when I wanted
+to upgrade the patching process to do more than just check for file existence, using FTP made the possibilities <em>very</em> limited.</p>
 
-<ul>
-  <li>Django REST Framework is <strong>awesome</strong>. It’s crazy to think that in
-my last (and first) Django project I wrote <em>all</em> the API endpoints myself, and
-only <em>some</em> were RESTful. This will definitely be a staple in any future
-Django projects.</li>
-  <li>Angular is <em>also</em> <strong>awesome</strong>. Up until this project, I only ever used jQuery
-for CRUD operations, and when you have a lot of models, the code adds up.
-Angular makes <em>everything</em> so simple once you understand it, and I’m really eager
-to use more Angular as well as try out other MVC front end frameworks!</li>
-</ul>
+<p>I knew I had to switch to a web server that would serve the files over HTTP.  Doing this would
+ease any worries about downloading going wrong and would also enable me to just fetch a file’s content
+in memory insteading of being forced to download them.  I needed <em>that</em> functionality so I could
+use a server manifest file to check what patches I need.</p>
+
+<p>Before ending up at the process described in the previous section, I attempted to use Google Drive and the Google Drive API
+for my patch server.  You can read about my creative struggle <a href="https://codeinpink.github.io/blog/2016/08/google-why-have-you-forsaken-me/">here</a>.</p>
+
+<p>One thing I wish I had done was rewrite it in C# to begin with.  C# is used everywhere; Visual Basic, not so much.</p>
+
+<p>Currently, checking for updates takes around 30 seconds because of having to compute checksums for all of the
+local files.  I’ll be updating  it in the future to use multithreading for that in hopes of making it faster.
+If that doesn’t work, maybe I’ll try to cache the checksums for a small period of time.</p>
+
+<p>Overall, I’m <strong>very</strong> happy with the launcher because it looks decent (especially compared to others out there)
+and does its job perfectly!  I think others will love it, too.  :)</p>
 
                             </div>
                         </div>
                         <!-- PORTFOLIO SIDEBAR - column 4/12 -->
 
-                        
-                        <!-- PORTFOLIO RELATED PROJECTS 12/12 -->
-                        <div class="col-md-12 portfolio-field">
-                            <h3>Related Projects</h3>
-                            
-                            <div class="col-sm-4">
-                                <a href="/portfolio/movielib "><img src="/img/projects/MovieLib-1.png" alt="A screenshot of the index page for the web application MovieLib" title="Project: MovieLib" class="img-responsive"></a>
-                            </div>
-                            
-                        </div>
-                        <!-- PORTFOLIO RELATED PROJECTS 12/12 -->
                         
                     </div>
                     <!-- .row -->

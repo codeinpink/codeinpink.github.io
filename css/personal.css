@@ -4,6 +4,7 @@
 .header {
 	color: #fff; background: #79CE98;
 }
+
 .single-page-layout .header .vs-nav {
 	margin-top: 0.5em;
 }
@@ -82,7 +83,12 @@
 
 .header h1 {
 	color: #fff;
-	font-size: 2em;
+	font-size: 2.2em;
+	font-family: 'Handlee', cursive;
+}
+
+.header p {
+	font-style: normal;
 }
 
 .portfolio-title span {

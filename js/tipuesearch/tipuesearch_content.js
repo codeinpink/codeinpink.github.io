@@ -38,6 +38,18 @@ var tipuesearch = {"pages": [
     "url": "http://codeinpink.github.io/portfolio/codeinpinkgithubio"},
     
     
+    {"title": "Game Launcher",
+    "text": "A game launcher for my Star Wars Galaxies emulation project. I inherited this from a previous developer, and while I started out just rewriting bits and pieces, by the end I had completely rewritten (and redesigned!) everything. It originally was kind of clunky and only had the ability to download… ",
+    "tags": "software development, project, Visual Basic, PHP, Python, Google Drive API, and Git",
+    "url": "http://codeinpink.github.io/portfolio/game-launcher"},
+    
+    
+    {"title": "Lollipoppy",
+    "text": "If I had to pick a project that represents my personality, this would be the one! The game uses cute candy art to create an adorable “Candy Wonderland” type world. You start collecting candy as the time (represented by your life) counts down, enjoying Willy Wonka’s “Oompa Loompa” as you… ",
+    "tags": "game development, project, JavaScript, Phaser.js, and Git",
+    "url": "http://codeinpink.github.io/portfolio/lollipoppy"},
+    
+    
     {"title": "MovieLib",
     "text": "A website used to track your movie collection. I chose this project because I wanted to learn a back end MVC framework, and I originally picked Ruby on Rails, but learning both a framework and a new language wasn’t so easy, so instead I opted for Django, the Python, MVT… ",
     "tags": "web development, project, Python, Django, JavaScript, HTML, CSS, Bootstrap, jQuery, PostgreSQL, AJAX, Git, Responsive, and Mobile Friendly",
