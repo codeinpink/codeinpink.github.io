@@ -56,7 +56,7 @@ are included.
 Add your search input if you don't have one already, and make sure you have a way to uniquely identify this input. Mine looked like this:
 
 {: .prettyprint}
-~~~
+~~~ JavaScript
 <input type="text" class="form-control typeahead" name="q" id="q" placeholder="Search Movies...">
 ~~~
 
@@ -64,17 +64,17 @@ To start with, we need to initialize our search bar's typeahead once the page is
 done loading, so add this to your JavaScript file:
 
 {: .prettyprint .linenums}
-~~~
+``` JavaScript
 $(document).ready(function() {
     setSearchAutocomplete();
 }
-~~~
+```
 
 Next, we need to make the setSearchAutocomplete function that will be called.
 Add the following function:
 
 {: .prettyprint .linenums}
-~~~ javascript
+``` JavaScript
 function setSearchAutocomplete() {
     var movies = new Bloodhound({
         datumTokenizer: function(d) {return Bloodhound.tokenizers.whitespace(d.title); },
@@ -88,7 +88,7 @@ function setSearchAutocomplete() {
     // .typeahead is the selector for my search bar
     setTypeaheadBinding('.typeahead', movies);
 }
-~~~
+```
 
 This function creates a Bloodhound object and then calls
 a function to initialize typeahead using this Bloodhound object on the given selector.
@@ -120,7 +120,7 @@ Now, we will finally initialize typeahead on our given element. Add the followin
 function:
 
 {: .prettyprint .linenums}
-~~~
+~~~ JavaScript
 function setTypeaheadBinding(selector, adapter) {
     $(selector).typeahead(null, {
         name: 'movies',
@@ -155,7 +155,7 @@ every part of the display, so you can get it to look just how you want it to loo
 Most of this initialization is just setting the templates, so here's the CSS to go with it:
 
 {: .prettyprint .linenums}
-~~~
+~~~ CSS
 /** Twitter Typeahead **/
 .twitter-typeahead, .typeahead, .empty-message  {
     width: 100%;
@@ -253,7 +253,7 @@ show all of the results for their current search term and not just bring them to
 a blank search page.
 
 {: .prettyprint .linenums}
-~~~
+~~~ JavaScript
 // #view-more-movies is the link shown at the bottom of the list of suggestions
 $(document).on('click', '#view-more-movies', function(e) {
     e.stopPropagation();
@@ -269,7 +269,7 @@ pop up with info on that movie. To display that modal, I need to get the IMDB ID
 suggestion so I know what movie to fetch:
 
 {: .prettyprint .linenums}
-~~~
+~~~ JavaScript
 $('.typeahead').on('typeahead:selected typeahead:autocompleted', function(e, datum) {
     $.magnificPopup.open({
         items: {
@@ -294,7 +294,7 @@ handles form widgets. It was easier to add a second input to use for the suggest
 and make the *actual* movie input hidden from the user.
 
 {: .prettyprint .linenums}
-~~~
+~~~ JavaScript
 // #select-movie is the input I used to initialize typeahead
 $('#select-movie').on('typeahead:selected typeahead:autocompleted', function(e, datum) {
     // this input is the input that needs the imdb_id value
