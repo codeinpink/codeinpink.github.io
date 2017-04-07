@@ -20,6 +20,8 @@ exclude: ['README.md']
 paginate: 10
 paginate_path: /blog/page/:num/
 
-permalink: /blog/:year/:month/:title/index.html
+permalink: /blog/:year/:month/:title/
 
 related_project_keys: ["category", "technology"]
+
+gems: ['jekyll-paginate']

@@ -87,7 +87,7 @@ layout: single
             <h3>RELATED POSTS</h3>
             <ol>
                 {% for related_post in site.related_posts limit:3 %}
-                <li><a href="{{ related_post.dir }}" rel="bookmark">{{ related_post.title }}</a></li>
+                <li><a href="{{ related_post.url }}" rel="bookmark">{{ related_post.title }}</a></li>
                 {% endfor %}
             </ol>
         </div>
@@ -141,14 +141,14 @@ layout: single
     <div class="nav-previous col-sm-6">
         {% if page.previous %}
         <h4>PREVIOUS POST</h4>
-        <a href="{{ page.previous.dir }}" rel="prev"><span class="meta-nav">←</span> {{ page.previous.title }}</a>
+        <a href="{{ page.previous.url }}" rel="prev"><span class="meta-nav">←</span> {{ page.previous.title }}</a>
         {% endif %}
     </div>
 
     <div class="nav-next col-sm-6">
         {% if page.next %}
         <h4>NEXT POST</h4>
-        <a href="{{ page.bext.dir }}" rel="next">{{ page.next.title }} <span class="meta-nav">→</span></a>
+        <a href="{{ page.next.url }}" rel="next">{{ page.next.title }} <span class="meta-nav">→</span></a>
         {% endif %}
     </div>
 </nav>

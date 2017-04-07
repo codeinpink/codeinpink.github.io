@@ -270,12 +270,12 @@ title: Home
                             </div>
                             {% endif %}
                             <div class="mask"></div>
-                            <a href="{{ post.dir }}"></a>
+                            <a href="{{ post.url }}"></a>
                         </div>
 
                         <header class="media-cell-desc">
                             <span title="{{ post.date | date: '%Y'}}" class="date"><span class="day">{{ post.date | date: '%d'}}</span>{{ post.date | date: '%b' | downcase }}</span>
-                            <h3><a href="{{ post.dir }}">{{ post.title }}</a></h3>
+                            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                         </header>
 
                     </article>

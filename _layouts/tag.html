@@ -24,7 +24,7 @@ layout: blog-filter
         <!-- .entry-header -->
         <header class="entry-header">
             <h1 class="entry-title">
-                <a href="{{ post.dir }}" rel="bookmark">{{ post.title }}</a>
+                <a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a>
             </h1>
         </header>
         <!-- .entry-header -->
@@ -39,7 +39,7 @@ layout: blog-filter
         <!-- .entry-content -->
         <div class="entry-content">
             {{ post.excerpt | truncatewords: 75 }}
-            <a href="{{ post.dir }}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+            <a href="{{ post.url }}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
         </div>
         <!-- .entry-content -->
     </article>
