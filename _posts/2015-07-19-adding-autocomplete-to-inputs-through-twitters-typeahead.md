@@ -6,7 +6,7 @@ img:
     url: /img/posts/typeahead.png
     title: "How to Add Twitter's Typeahead Library to Your Site"
     alt: "A screenshot of Twitter's Typeahead library in action"
-category: web development
+category: tutorial
 tags: javascript tutorial typeahead jQuery
 type: hentry
 preview: "http://mymovielib.com/"
