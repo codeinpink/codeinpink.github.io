@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="As I sit here staring at the HTML of a virus scan warning page, I wonder where I went wrong in my life.  Is this because I kept using Visual Basic anddidn&#8...">
+    <meta name="description" content="As I sit here staring at the HTML of a virus scan warning page, I wonder where I went wrong in my life.  Is this because I kept using Visual Basic anddidn’t ...">
     <meta name="keywords" content="Shannon Babincsak, web dev, web developer, codeinpink, portfolio">
     <meta name="author" content="Shannon Babincsak">
 
@@ -151,7 +151,7 @@ If the files get taken down then we can easily make a new account.  Why not use 
 <h1 id="cue-my-creative-and-inevitable-struggle">Cue My Creative and Inevitable Struggle</h1>
 
 <h2 id="predictability">Predictability</h2>
-<p>I started writing a script in Python that generates a <code>manifest.json</code> that would contain all the patches and their relevant information,
+<p>I started writing a script in Python that generates a <code class="highlighter-rouge">manifest.json</code> that would contain all the patches and their relevant information,
 such as the checksum and file path.  Still riding the high from discovering a new way to be
 cheap and take advantage of the free resources out there, I coded away under the assumption that Google Drive files
 have predictable URLs – as if my years of using Google Drive as an online file storage suddenly vanished.</p>
@@ -184,7 +184,7 @@ the script to view some information about my files.</p>
 
 <ul>
   <li>Google generates a MD5 checksum for each file, saving me time and effort</li>
-  <li>Each file has a mime type (yes, even that <code>application/vnd.google-apps.folder</code>)</li>
+  <li>Each file has a mime type (yes, even that <code class="highlighter-rouge">application/vnd.google-apps.folder</code>)</li>
   <li>You can view the parents of a file and use it to create a folder structure</li>
   <li>Each file actually has a <em>ton</em> of information (not that I need most of it)</li>
 </ul>
@@ -192,11 +192,11 @@ the script to view some information about my files.</p>
 <p>The bad things:</p>
 
 <ul>
-  <li>You have to explicitly request each field you want, such as <code>fields="files(id, name, md5Checksum, size)</code>.
+  <li>You have to explicitly request each field you want, such as <code class="highlighter-rouge">fields="files(id, name, md5Checksum, size)</code>.
 I tried to use the docs and the try-it-yourself REST interface to get the list of fields I needed, but sadly some fields didn’t
-work.  Rather than play the guessing game, it was easier to just do <code>fields="files"</code> and call it a day (thanks, Stack Overflow! (sorry, Google server)).</li>
-  <li>Specifying <code>pageSize</code>, contrary to what the docs say, doesn’t actually work.  No matter what value you give it, it will always
-return 100 results.  You’ll need to use that <code>pageToken</code>.  Sorry!</li>
+work.  Rather than play the guessing game, it was easier to just do <code class="highlighter-rouge">fields="files"</code> and call it a day (thanks, Stack Overflow! (sorry, Google server)).</li>
+  <li>Specifying <code class="highlighter-rouge">pageSize</code>, contrary to what the docs say, doesn’t actually work.  No matter what value you give it, it will always
+return 100 results.  You’ll need to use that <code class="highlighter-rouge">pageToken</code>.  Sorry!</li>
 </ul>
 
 <h2 id="download-pls">Download Pls</h2>
@@ -206,8 +206,8 @@ return 100 results.  You’ll need to use that <code>pageToken</code>.  Sorry!</
 is going well until I try to actually download a file.  It downloads something, but not the file I wanted it to download: it’s the HTML
 of the download page.</p>
 
-<p>Each file in the list contains a <code>webContentLink</code>, but simply downloading each file’s <code>webContentLink</code> isn’t going to work.  What I really
-needed to download was the response’s <code>ResponseUri</code>.  Kind of wonky to have the launcher visit a URL only to download something else, but
+<p>Each file in the list contains a <code class="highlighter-rouge">webContentLink</code>, but simply downloading each file’s <code class="highlighter-rouge">webContentLink</code> isn’t going to work.  What I really
+needed to download was the response’s <code class="highlighter-rouge">ResponseUri</code>.  Kind of wonky to have the launcher visit a URL only to download something else, but
 it works, I guess?</p>
 
 <p><strong>Just kidding.</strong>  At least, kinda.</p>
@@ -224,7 +224,7 @@ crispy 36 KB under the Size column of my File Explorer window.  Actually, to be 
 size?  My search reported nothing.  If they aren’t limiting the download, then what the hell is the launcher downloading?</p>
 
 <p>Because Atom seriously sucks for viewing large documents and while 36 KB isn’t much I don’t want to also deal with any possible disappointment
-from my favorite text editor, I threw that <code>patch_09.tre</code> bad boy into Notepad++ and was amazed. <a href="#footer-note-2" id="footer-reference-2"><sup>[2]</sup></a></p>
+from my favorite text editor, I threw that <code class="highlighter-rouge">patch_09.tre</code> bad boy into Notepad++ and was amazed. <a href="#footer-note-2" id="footer-reference-2"><sup>[2]</sup></a></p>
 
 <p><strong>I was looking at yet another HTML document.</strong></p>
 
@@ -300,11 +300,11 @@ dreams and let me down, and it’s time for me to go home.</p>
             <h3>RELATED POSTS</h3>
             <ol>
                 
-                <li><a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day" rel="bookmark">I Wish Every Work Day Was a Hackathon Day</a></li>
+                <li><a href="/blog/2017/04/making-the-most-out-of-github-pages/" rel="bookmark">Making the Most Out of GitHub Pages</a></li>
                 
-                <li><a href="/blog/2016/05/my-latest-z-index-problem" rel="bookmark">My Latest Z-index Problem</a></li>
+                <li><a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day/" rel="bookmark">I Wish Every Work Day Was a Hackathon Day</a></li>
                 
-                <li><a href="/blog/2015/09/my-second-term-at-adtran-first-month" rel="bookmark">My Second Term at ADTRAN: First Month</a></li>
+                <li><a href="/blog/2016/05/my-latest-z-index-problem/" rel="bookmark">My Latest Z-index Problem</a></li>
                 
             </ol>
         </div>
@@ -363,11 +363,14 @@ dreams and let me down, and it’s time for me to go home.</p>
     <div class="nav-previous col-sm-6">
         
         <h4>PREVIOUS POST</h4>
-        <a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day" rel="prev"><span class="meta-nav">←</span> I Wish Every Work Day Was a Hackathon Day</a>
+        <a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day/" rel="prev"><span class="meta-nav">←</span> I Wish Every Work Day Was a Hackathon Day</a>
         
     </div>
 
     <div class="nav-next col-sm-6">
+        
+        <h4>NEXT POST</h4>
+        <a href="/blog/2017/04/making-the-most-out-of-github-pages/" rel="next">Making the Most Out of GitHub Pages <span class="meta-nav">→</span></a>
         
     </div>
 </nav>

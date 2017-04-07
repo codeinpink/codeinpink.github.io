@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="I recently used Twitter&#8217;s JavaScript library typeahead.js (now referred toas typeahead in the rest of the post) in one of my projects,MovieLib, and I c...">
+    <meta name="description" content="I recently used Twitter’s JavaScript library typeahead.js (now referred toas typeahead in the rest of the post) in one of my projects,MovieLib, and I can’t w...">
     <meta name="keywords" content="Shannon Babincsak, web dev, web developer, codeinpink, portfolio">
     <meta name="author" content="Shannon Babincsak">
 
@@ -99,7 +99,7 @@
     <div class="entry-meta">
         <span class="posted-in">
             posted in
-        	<a href="/blog/categories/web-development/" title="View all posts in this category">Web development</a>
+        	<a href="/blog/categories/tutorial/" title="View all posts in this category">Tutorial</a>
         </span>
 
         <span class="posted-on">
@@ -163,13 +163,13 @@ are included.</p>
 <h2 id="adding-typeahead-to-search-bar">Adding Typeahead to Search Bar</h2>
 <p>Add your search input if you don’t have one already, and make sure you have a way to uniquely identify this input. Mine looked like this:</p>
 
-<pre class="prettyprint"><code>&lt;input type="text" class="form-control typeahead" name="q" id="q" placeholder="Search Movies..."&gt;
+<pre class="prettyprint"><code class="language-JavaScript">&lt;input type="text" class="form-control typeahead" name="q" id="q" placeholder="Search Movies..."&gt;
 </code></pre>
 
 <p>To start with, we need to initialize our search bar’s typeahead once the page is
 done loading, so add this to your JavaScript file:</p>
 
-<pre class="prettyprint linenums"><code>$(document).ready(function() {
+<pre class="prettyprint linenums"><code class="language-JavaScript">$(document).ready(function() {
     setSearchAutocomplete();
 }
 </code></pre>
@@ -177,7 +177,7 @@ done loading, so add this to your JavaScript file:</p>
 <p>Next, we need to make the setSearchAutocomplete function that will be called.
 Add the following function:</p>
 
-<pre class="prettyprint linenums"><code class="language-javascript">function setSearchAutocomplete() {
+<pre class="prettyprint linenums"><code class="language-JavaScript">function setSearchAutocomplete() {
     var movies = new Bloodhound({
         datumTokenizer: function(d) {return Bloodhound.tokenizers.whitespace(d.title); },
         queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -207,7 +207,7 @@ it into an array of string tokens)</p>
 I want it to remove the whitespace, but I also want it to return the title of the
 datum object. Why? Because when it gets data from the
 specified URL, the server returns results in this format:
-<code>[{"title": title "imdb_id": imdb_id, "plot": plot, "year": year, "poster": poster}, {...}, ...]</code>
+<code class="highlighter-rouge">[{"title": title "imdb_id": imdb_id, "plot": plot, "year": year, "poster": poster}, {...}, ...]</code>
 I want my suggestions to be based off of the title of the movie, so that’s why I
 return the title of the datum object. Without returning the title, it will base
 suggestions off of <em>all</em> properties of the datum object (plot, year, etc), which wouldn’t be useful.
@@ -227,7 +227,7 @@ you can even make your own tokenizers, but this was all I needed.</p>
 <p>Now, we will finally initialize typeahead on our given element. Add the following
 function:</p>
 
-<pre class="prettyprint linenums"><code>function setTypeaheadBinding(selector, adapter) {
+<pre class="prettyprint linenums"><code class="language-JavaScript">function setTypeaheadBinding(selector, adapter) {
     $(selector).typeahead(null, {
         name: 'movies',
         displayKey: 'title',
@@ -260,7 +260,7 @@ object created in the previous function. As you can see, typeahead lets you cust
 every part of the display, so you can get it to look just how you want it to look.
 Most of this initialization is just setting the templates, so here’s the CSS to go with it:</p>
 
-<pre class="prettyprint linenums"><code>/** Twitter Typeahead **/
+<pre class="prettyprint linenums"><code class="language-CSS">/** Twitter Typeahead **/
 .twitter-typeahead, .typeahead, .empty-message  {
     width: 100%;
 }
@@ -355,7 +355,7 @@ query. This way, when the user clicks the link, the search page will actually
 show all of the results for their current search term and not just bring them to
 a blank search page.</p>
 
-<pre class="prettyprint linenums"><code>// #view-more-movies is the link shown at the bottom of the list of suggestions
+<pre class="prettyprint linenums"><code class="language-JavaScript">// #view-more-movies is the link shown at the bottom of the list of suggestions
 $(document).on('click', '#view-more-movies', function(e) {
     e.stopPropagation();
     e.preventDefault();
@@ -369,7 +369,7 @@ $(document).on('click', '#view-more-movies', function(e) {
 pop up with info on that movie. To display that modal, I need to get the IMDB ID from the
 suggestion so I know what movie to fetch:</p>
 
-<pre class="prettyprint linenums"><code>$('.typeahead').on('typeahead:selected typeahead:autocompleted', function(e, datum) {
+<pre class="prettyprint linenums"><code class="language-JavaScript">$('.typeahead').on('typeahead:selected typeahead:autocompleted', function(e, datum) {
     $.magnificPopup.open({
         items: {
             src: 'movies/view/' + datum.imdb_id
@@ -392,7 +392,7 @@ wondering why I’m using two different inputs here, it’s because of how Djang
 handles form widgets. It was easier to add a second input to use for the suggestions
 and make the <em>actual</em> movie input hidden from the user.</p>
 
-<pre class="prettyprint linenums"><code>// #select-movie is the input I used to initialize typeahead
+<pre class="prettyprint linenums"><code class="language-JavaScript">// #select-movie is the input I used to initialize typeahead
 $('#select-movie').on('typeahead:selected typeahead:autocompleted', function(e, datum) {
     // this input is the input that needs the imdb_id value
     $('input[name=movie]').val(datum.imdb_id);
@@ -444,11 +444,11 @@ to mess around with! To see these examples in action, check out my site below!</
             <h3>RELATED POSTS</h3>
             <ol>
                 
-                <li><a href="/blog/2016/08/google-why-have-you-forsaken-me" rel="bookmark">Google, Why Have You Forsaken Me?</a></li>
+                <li><a href="/blog/2017/04/making-the-most-out-of-github-pages/" rel="bookmark">Making the Most Out of GitHub Pages</a></li>
                 
-                <li><a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day" rel="bookmark">I Wish Every Work Day Was a Hackathon Day</a></li>
+                <li><a href="/blog/2016/08/google-why-have-you-forsaken-me/" rel="bookmark">Google, Why Have You Forsaken Me?</a></li>
                 
-                <li><a href="/blog/2016/05/my-latest-z-index-problem" rel="bookmark">My Latest Z-index Problem</a></li>
+                <li><a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day/" rel="bookmark">I Wish Every Work Day Was a Hackathon Day</a></li>
                 
             </ol>
         </div>
@@ -509,14 +509,14 @@ to mess around with! To see these examples in action, check out my site below!</
     <div class="nav-previous col-sm-6">
         
         <h4>PREVIOUS POST</h4>
-        <a href="/blog/2015/07/obligatory-hello-world" rel="prev"><span class="meta-nav">←</span> Obligatory "Hello World"</a>
+        <a href="/blog/2015/07/obligatory-hello-world/" rel="prev"><span class="meta-nav">←</span> Obligatory "Hello World"</a>
         
     </div>
 
     <div class="nav-next col-sm-6">
         
         <h4>NEXT POST</h4>
-        <a href="" rel="next">My First Term at ADTRAN <span class="meta-nav">→</span></a>
+        <a href="/blog/2015/07/my-first-term-at-adtran/" rel="next">My First Term at ADTRAN <span class="meta-nav">→</span></a>
         
     </div>
 </nav>

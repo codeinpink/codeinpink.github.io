@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Two months ago I launched a site for a gaming project that I&#8217;m involved in.  Ireceived a lot of good feedback from people, but it wasn&#8217;t long bef...">
+    <meta name="description" content="Two months ago I launched a site for a gaming project that I’m involved in.  Ireceived a lot of good feedback from people, but it wasn’t long before I had my...">
     <meta name="keywords" content="Shannon Babincsak, web dev, web developer, codeinpink, portfolio">
     <meta name="author" content="Shannon Babincsak">
 
@@ -145,7 +145,7 @@ That’s when I came across <a href="http://sevenspark.com/diagnosis/z-index-sub
 I didn’t even have to read all of the article to identify the issue.</p>
 
 <h2 id="the-solution">The Solution</h2>
-<p>At some point <code>position: static</code> had made its way into my styling of <code>.navbar</code>.
+<p>At some point <code class="highlighter-rouge">position: static</code> had made its way into my styling of <code class="highlighter-rouge">.navbar</code>.
 I don’t know if it came from one of the suggestions on Stack Overflow or something else,
 but it was the problem.  Like the article says, <strong>z-index only affects elements with position –
 NOT STATIC ELEMENTS.</strong>  Sure enough, I removed that styling and my nav-related
@@ -154,7 +154,7 @@ z-index additions worked.</p>
 <p>This frustrating (<em>and small</em>) bug taught me or reminded me of a few things:</p>
 
 <ol>
-  <li>Don’t use <code>position: static</code> when also specifying z-index</li>
+  <li>Don’t use <code class="highlighter-rouge">position: static</code> when also specifying z-index</li>
   <li>I’m still not a master at CSS</li>
   <li>Most people aren’t masters at CSS, either</li>
   <li>Cross browser testing is still very important (<em>and valuable</em>)</li>
@@ -173,11 +173,11 @@ z-index additions worked.</p>
             <h3>RELATED POSTS</h3>
             <ol>
                 
-                <li><a href="/blog/2016/08/google-why-have-you-forsaken-me" rel="bookmark">Google, Why Have You Forsaken Me?</a></li>
+                <li><a href="/blog/2017/04/making-the-most-out-of-github-pages/" rel="bookmark">Making the Most Out of GitHub Pages</a></li>
                 
-                <li><a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day" rel="bookmark">I Wish Every Work Day Was a Hackathon Day</a></li>
+                <li><a href="/blog/2016/08/google-why-have-you-forsaken-me/" rel="bookmark">Google, Why Have You Forsaken Me?</a></li>
                 
-                <li><a href="/blog/2015/09/my-second-term-at-adtran-first-month" rel="bookmark">My Second Term at ADTRAN: First Month</a></li>
+                <li><a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day/" rel="bookmark">I Wish Every Work Day Was a Hackathon Day</a></li>
                 
             </ol>
         </div>
@@ -234,14 +234,14 @@ z-index additions worked.</p>
     <div class="nav-previous col-sm-6">
         
         <h4>PREVIOUS POST</h4>
-        <a href="/blog/2015/09/my-second-term-at-adtran-first-month" rel="prev"><span class="meta-nav">←</span> My Second Term at ADTRAN: First Month</a>
+        <a href="/blog/2015/09/my-second-term-at-adtran-first-month/" rel="prev"><span class="meta-nav">←</span> My Second Term at ADTRAN: First Month</a>
         
     </div>
 
     <div class="nav-next col-sm-6">
         
         <h4>NEXT POST</h4>
-        <a href="" rel="next">I Wish Every Work Day Was a Hackathon Day <span class="meta-nav">→</span></a>
+        <a href="/blog/2016/07/i-wish-every-day-was-a-hackathon-day/" rel="next">I Wish Every Work Day Was a Hackathon Day <span class="meta-nav">→</span></a>
         
     </div>
 </nav>
