@@ -1,0 +1,44 @@
+title: vipid
+date: 2017/04/07
+link: https://www.vipidapp.com/
+type: mobile application
+category: web development
+description: |
+    A hybrid mobile application that's like a digital rolodex of information that never goes out-of-date.  We aim to be the
+    LinkedIn of business cards.
+
+    Instead of handing someone your business card, you can scan each other's QR codes (like Snapchat), use NFC, or use some other method
+    to exchange contact information.  You can select *what* information you want to share based on the person you are connecting with,
+    whether that includes a portfolio and LinkedIn profile for a recruiter or a Facebook and Twitter for someone you just met.  You
+    can then add the contact to a group (like "DjangoCon 2017") or add tags, where you met the person, and other information that will
+    help you remember the connection.  Resume sharing, meeting requests, and other cool features are planned.
+
+    This was exclusively built by me (with a few memes tossed in by my friend Jose).
+    This took at least 500 hours from my rough time estimates, and the last two months before launch were
+    full of 8-12 hour days on top of school.
+
+    The app itself is built using Ionic2, a framework on top of Cordova (which lets you build web applications natively).
+    Ionic2 uses Angular2, and Angular2 suggests Typescript, so I used that, as well.  The server is Django, a Python framework,
+    and is used mostly for the database models and the API (built using Django Rest Framework).  The server is currently hosted
+    on Heroku because I really hate configuring servers and heroku is **freaking awesome**.
+reflection: |
+    Ionic is awesome -- **seriously**.  Lots of apps are simple enough that a web app works, and I don't think the user would know
+    the difference as long as it is styled like an app should be (which Ionic makes **incredibly easy**).  I love that if you need to use
+    native functions there is support for that, and that functionality makes building hybrid apps like this way more exciting than a typical
+    web application.
+
+    I also love Django, but that's nothing new.  ;)
+image:
+    url: /img/projects/vipid.png
+    title: "Project: vipid"
+    alt: A featured screenshot of the app's Google Play listing
+technology:
+        - Ionic
+        - Angular
+        - Typescript
+        - Django
+        - Python
+        - PostgreSQL
+        - Git
+        - HTML
+        - CSS
