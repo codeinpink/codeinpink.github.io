@@ -4,7 +4,8 @@
     --text-color: #8190A5;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
 }
@@ -16,12 +17,19 @@ body {
     font-size: 1.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Lato', sans-serif;
     text-transform: lowercase;
 }
 
-h1 span, h2 {
+h1 span,
+h2,
+h3 {
     color: var(--accent-color);
 }
 
@@ -31,7 +39,8 @@ h1 span, h2 {
     }
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
     color: var(--accent-color);
     transition: all ease-in-out 0.25s;
 }
@@ -76,7 +85,8 @@ a:hover, a:active {
     color: white;
 }
 
-.social-links a:hover, a:active {
+.social-links a:hover,
+a:active {
     color: var(--accent-color);
 }
 
@@ -103,7 +113,8 @@ a:hover, a:active {
     border-bottom: 2px dashed var(--primary-color);
 }
 
-.content a:hover, .content a:active {
+.content a:hover,
+.content a:active {
     color: var(--accent-color);
     border-bottom-color: var(--accent-color);
 }
@@ -112,7 +123,8 @@ a:hover, a:active {
     color: var(--accent-color);
 }
 
-.fun-facts h2, .fun-facts li {
+.fun-facts h3,
+.fun-facts li {
     background: -webkit-linear-gradient(90deg, var(--accent-color) 0%, #00ffff 30%, #ed9b46 50%);
     background: linear-gradient(90deg, var(--accent-color) 0%, #00ffff 30%, #ed9b46 50%);
     -webkit-background-clip: text;
