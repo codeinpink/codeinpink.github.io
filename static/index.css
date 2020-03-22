@@ -132,3 +132,7 @@ a:active {
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
 }
+
+#gizmo {
+    display: block;
+}
